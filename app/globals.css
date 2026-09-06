@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #042e3a;
+  --trust-navy: #042e3a;
+  --logo-teal: #00a99d;
+  --logo-teal-hover: #008f84;
+  --logo-teal-light: #e6f7f5;
+  --logo-navy-dark: #021f27;
+  --body-text: #1e293b;
+  --body-muted: #475569;
+  --bg-light: #f8fafc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Times New Roman", Times, Georgia, Cambria, serif;
+  --font-serif: "Times New Roman", Times, Georgia, Cambria, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Times New Roman", Times, Georgia, Cambria, serif;
+}
+
+body {
+  background: #ffffff;
+  color: #1e293b;
+  font-family: "Times New Roman", Times, Georgia, Cambria, serif;
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman", Times, Georgia, Cambria, serif;
+  letter-spacing: -0.01em;
+  color: #042e3a;
+}
+
+p {
+  color: #334155;
+  line-height: 1.8;
+}
+
+/* Accessible focus ring using logo teal */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #00a99d;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar matching logo theme */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00a99d;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #042e3a;
+}
+
+/* High-Impact Interactive Hover Tokens */
+.trust-btn-primary {
+  background: linear-gradient(135deg, #042e3a 0%, #00a99d 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 169, 157, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trust-btn-primary:hover {
+  background: linear-gradient(135deg, #00a99d 0%, #042e3a 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 169, 157, 0.5);
+}
+
+.trust-btn-secondary {
+  background: #ffffff;
+  color: #042e3a;
+  border: 2px solid #042e3a;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trust-btn-secondary:hover {
+  background: #f0fdfb;
+  border-color: #00a99d;
+  color: #00a99d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 169, 157, 0.2);
+}
+
+.trust-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trust-card-hover:hover {
+  transform: translateY(-8px);
+  border-color: #00a99d !important;
+  box-shadow: 0 20px 35px -10px rgba(0, 169, 157, 0.25) !important;
+}
+
+/* Scroll Animation Helper Classes */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

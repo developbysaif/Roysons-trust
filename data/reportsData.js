@@ -1,0 +1,38 @@
+export const reportsData = [
+  {
+    year: "2025",
+    title: "Annual Impact & Financial Disclosure Report 2025",
+    type: "Audited Annual Report",
+    size: "2.4 MB (PDF)",
+    description: "Comprehensive review of 2025 charitable expenditures, program deliverables, beneficiary counts, and independent statutory auditor statements.",
+    placeholderNotice: "[Verified Annual Audit Report — Contact Secretariat for official signed copy]",
+    highlights: ["PKR 45M+ disbursed in direct programmatic welfare", "94% scholarship student retention", "Zero administrative deductions on Zakat fund"],
+  },
+  {
+    year: "2024",
+    title: "Annual Impact & Transparency Report 2024",
+    type: "Audited Annual Report",
+    size: "1.9 MB (PDF)",
+    description: "Annual accounting of flood rehabilitation, mobile medical clinics, winter relief drives, and educational grants.",
+    placeholderNotice: "[Verified Annual Audit Report — Contact Secretariat for official signed copy]",
+    highlights: ["28,000+ flood survivors assisted", "18 smart computer labs commissioned", "35+ rural medical camps conducted"],
+  },
+  {
+    year: "2023",
+    title: "Institutional Stewardship & Welfare Report 2023",
+    type: "Audited Annual Report",
+    size: "1.7 MB (PDF)",
+    description: "Summary of foundational initiatives, community drinking water plant installations, and vocational program setup.",
+    placeholderNotice: "[Verified Annual Audit Report — Contact Secretariat for official signed copy]",
+    highlights: ["12 solar RO plants installed", "3,200 family ration kits distributed", "First Hunar academy opened"],
+  },
+  {
+    year: "Ongoing",
+    title: "Charitable Trust Deed & Governance By-Laws",
+    type: "Legal Governance Charter",
+    size: "1.2 MB (PDF)",
+    description: "Foundational legal constitution, fiduciary responsibilities of the Board of Trustees, and Shariah-compliant Zakat distribution rules.",
+    placeholderNotice: "[Registered Trust Deed under Trust Act — Verified Public Record]",
+    highlights: ["Strict segregation of Zakat vs. General Sadaqah funds", "Independent quarterly audit requirement", "Direct beneficiary verification protocols"],
+  },
+];
