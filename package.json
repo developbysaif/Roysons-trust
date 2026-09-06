@@ -1,0 +1,11 @@
+{
+  "name": "roysons-trust-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix my-project run dev",
+    "build": "npm --prefix my-project run build",
+    "start": "npm --prefix my-project run start",
+    "lint": "npm --prefix my-project run lint"
+  }
+}
