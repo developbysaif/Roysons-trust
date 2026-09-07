@@ -90,7 +90,7 @@ export default function Footer() {
             <Link href="/" className="inline-block">
               <div className="relative w-56 h-18 sm:w-68 sm:h-22 bg-white p-3 rounded-2xl shadow-lg border border-teal-800/30">
                 <Image
-                  src="/logos/Roysons-02.png"
+                  src="/trust/Roysons-05.png"
                   alt="ROYSONS Trust"
                   fill
                   className="object-contain object-left p-1.5"

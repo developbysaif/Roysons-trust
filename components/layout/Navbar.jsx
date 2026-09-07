@@ -164,7 +164,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-2.5 group focus:outline-none py-1 shrink-0">
               <div className="relative w-44 h-12 sm:w-48 sm:h-14 lg:w-52 lg:h-15 xl:w-56 xl:h-16 shrink-0 transition-transform duration-300 group-hover:scale-[1.02]">
                 <Image
-                  src="/logos/Roysons-02.png"
+                  src="/trust/Roysons-05.png"
                   alt="ROYSONS Trust"
                   fill
                   priority
