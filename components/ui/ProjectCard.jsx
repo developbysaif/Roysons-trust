@@ -30,13 +30,13 @@ export default function ProjectCard({ project }) {
         {/* Status Badge */}
         <div className="absolute top-3.5 right-3.5">
           <span
-            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide shadow-md ${
+            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide shadow-md ${
               isActive
-                ? "bg-[#00A99D] text-white"
+                ? "trust-gradient-primary text-white"
                 : "bg-[#042E3A]/90 text-white"
             }`}
           >
-            {isActive ? <Clock size={12} /> : <CheckCircle2 size={12} />}
+            {isActive ? <Clock size={13} /> : <CheckCircle2 size={13} />}
             {project.status}
           </span>
         </div>

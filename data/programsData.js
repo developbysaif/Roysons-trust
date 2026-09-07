@@ -8,7 +8,7 @@ export const programsData = [
     summary:
       "Education is the greatest equalizer. Roysons Trust partners with underprivileged schools, provides full academic merit-and-need scholarships, renovates degraded school infrastructure, and provides modern digital learning tools to ensure no promising child is left behind.",
     icon: "GraduationCap",
-    coverImage: "/trust/trust_school_classroom.jpg",
+    coverImage: "/trust/trust_scholarship_girls.jpg",
     accentColor: "from-[#00A99D]/10 to-[#042E3A]/10",
     borderHover: "hover:border-[#00A99D]",
     stats: [
@@ -82,7 +82,7 @@ export const programsData = [
     summary:
       "No family should go to sleep hungry. Roysons Trust provides dignified, monthly staple food hampers containing essential flour, pulses, cooking oil, rice, and nutrition supplements to widows, disabled heads of households, and families facing severe economic distress.",
     icon: "Utensils",
-    coverImage: "/trust/trust_hero_community.jpg",
+    coverImage: "/trust/trust_food_ration.jpg",
     accentColor: "from-[#00A99D]/10 to-[#042E3A]/10",
     borderHover: "hover:border-[#00A99D]",
     stats: [
@@ -118,7 +118,7 @@ export const programsData = [
     summary:
       "When disaster strikes, every hour counts. Roysons Trust maintains an agile emergency response team equipped to mobilize dry rations, clean drinking water, temporary shelters, medical aid, and winterization kits within 24 to 48 hours of catastrophic events.",
     icon: "ShieldAlert",
-    coverImage: "/trust/trust_sustainability.jpg",
+    coverImage: "/trust/trust_hero_community.jpg",
     accentColor: "from-[#00A99D]/10 to-[#042E3A]/10",
     borderHover: "hover:border-[#00A99D]",
     stats: [
@@ -154,7 +154,7 @@ export const programsData = [
     summary:
       "Sustainable community development transforms lives permanently. Roysons Trust invests in reverse-osmosis and solar-powered water filtration plants, community sanitation complexes, and basic public facilities that uplift entire villages.",
     icon: "Building",
-    coverImage: "/trust/trust_research.jpg",
+    coverImage: "/trust/trust_water_plant.jpg",
     accentColor: "from-[#00A99D]/10 to-[#042E3A]/10",
     borderHover: "hover:border-[#00A99D]",
     stats: [

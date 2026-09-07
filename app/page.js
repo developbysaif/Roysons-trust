@@ -54,7 +54,7 @@ export default function HomePage() {
 
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#042E3A] tracking-tight leading-[1.12]">
                 Creating Hope. <br className="hidden sm:inline" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A99D] to-[#042E3A]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0284C7] via-[#00A99D] to-[#059669]">
                   Changing Lives.
                 </span>{" "}
                 <br className="hidden sm:inline" />
@@ -65,21 +65,21 @@ export default function HomePage() {
                 Roysons Trust works to support communities, empower individuals and create meaningful opportunities through education, healthcare, social welfare and community development.
               </p>
 
-              {/* Action Buttons */}
+              {/* Action Buttons (Strictly Single Line) */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                 <Link
                   href="/donate"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-gradient-to-r from-[#00A99D] to-[#042E3A] hover:opacity-95 text-white text-sm font-black uppercase tracking-wider shadow-lg hover:shadow-xl shadow-[#042E3A]/25 transition-all transform hover:-translate-y-0.5 active:scale-95"
+                  className="whitespace-nowrap w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl trust-btn-gradient text-white text-sm font-black uppercase tracking-wider shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-0.5 active:scale-95"
                 >
-                  <Heart size={18} className="fill-white animate-pulse" />
-                  <span>Donate Now</span>
+                  <Heart size={18} className="fill-white animate-pulse shrink-0" />
+                  <span className="whitespace-nowrap">Donate Now</span>
                 </Link>
 
                 <Link
                   href="/programs"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white hover:bg-slate-50 border-2 border-slate-300 hover:border-[#00A99D] text-[#042E3A] hover:text-[#00A99D] text-sm font-bold tracking-wide shadow-sm hover:shadow-md transition-all"
+                  className="whitespace-nowrap w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white hover:bg-slate-50 border-2 border-slate-300 hover:border-[#00A99D] text-[#042E3A] hover:text-[#00A99D] text-sm font-bold tracking-wide shadow-sm hover:shadow-md transition-all"
                 >
-                  <span>Explore Our Work</span>
+                  <span className="whitespace-nowrap">Explore Our Work</span>
                   <ArrowRight size={16} />
                 </Link>
               </div>
@@ -117,11 +117,11 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#042E3A]/60 via-transparent to-transparent" />
                 </div>
 
-                {/* Floating Impact Card */}
+                {/* Floating Impact Card with Image 2 Gradient Icon */}
                 <div className="absolute -bottom-6 -left-4 sm:-left-8 bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-slate-100 max-w-[240px] sm:max-w-[260px] animate-in fade-in slide-in-from-bottom duration-700">
                   <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-xl bg-[#00A99D]/15 text-[#00A99D] flex items-center justify-center flex-shrink-0">
-                      <HeartPulse size={22} />
+                    <div className="w-12 h-12 rounded-2xl trust-gradient-primary text-white flex items-center justify-center shrink-0 shadow-md">
+                      <HeartPulse size={24} />
                     </div>
                     <div>
                       <span className="block text-xl font-black text-[#042E3A]">
@@ -201,8 +201,8 @@ export default function HomePage() {
             <div className="lg:col-span-6 relative reveal-item">
               <div className="relative h-[350px] sm:h-[420px] w-full rounded-3xl overflow-hidden shadow-xl border-4 border-white">
                 <Image
-                  src="/trust/trust_school_classroom.jpg"
-                  alt="Roysons Trust Education Mission in Pakistani Classrooms"
+                  src="/trust/trust_scholarship_girls.jpg"
+                  alt="Roysons Trust Education Scholarships in Pakistan"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -387,8 +387,8 @@ export default function HomePage() {
       {/* 8. DIRECT ENGAGEMENT CALL TO ACTION */}
       <section className="py-20 bg-gradient-to-b from-[#042E3A] via-[#022028] to-[#042E3A] text-white relative reveal-item">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#00A99D]/20 text-[#00A99D] border border-[#00A99D]/40">
-            <Heart size={28} className="fill-[#00A99D]" />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl trust-gradient-primary text-white shadow-xl">
+            <Heart size={28} className="fill-white" />
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
@@ -402,14 +402,14 @@ export default function HomePage() {
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/donate"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-[#00A99D] to-[#042E3A] hover:opacity-95 text-white font-black uppercase tracking-wider text-sm shadow-xl transition-all hover:scale-105"
+              className="whitespace-nowrap w-full sm:w-auto px-9 py-4 rounded-xl trust-btn-gradient text-white font-black uppercase tracking-wider text-sm shadow-xl hover:shadow-2xl transition-all hover:scale-105"
             >
               Donate to Roysons Trust
             </Link>
 
             <Link
               href="/volunteer"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 hover:border-[#00A99D] text-white font-bold uppercase tracking-wider text-sm transition-all"
+              className="whitespace-nowrap w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 hover:border-[#00A99D] text-white font-bold uppercase tracking-wider text-sm transition-all"
             >
               Become a Volunteer
             </Link>

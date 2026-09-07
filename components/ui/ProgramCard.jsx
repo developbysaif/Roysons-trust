@@ -36,10 +36,12 @@ export default function ProgramCard({ program }) {
         {/* Subtle Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#042E3A]/85 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
-        {/* Floating Category Badge */}
-        <div className="absolute top-3.5 left-3.5">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-black uppercase tracking-wider text-[#042E3A] shadow-md border border-[#00A99D]/30">
-            <IconComponent size={14} className="text-[#00A99D]" />
+        {/* Floating Category Badge with Image 2 Gradient Icon */}
+        <div className="absolute top-3.5 left-3.5 flex items-center gap-2">
+          <div className="w-10 h-10 rounded-xl trust-gradient-primary flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
+            <IconComponent size={18} />
+          </div>
+          <span className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-xs font-black uppercase tracking-wider text-[#042E3A] shadow-md border border-[#00A99D]/30">
             {program.shortTitle}
           </span>
         </div>

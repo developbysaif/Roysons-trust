@@ -7,7 +7,7 @@ export const projectsData = [
     location: "Rural Punjab, District Kasur",
     date: "2025 - Present",
     status: "Active",
-    coverImage: "/trust/trust_school_classroom.jpg",
+    coverImage: "/trust/trust_scholarship_girls.jpg",
     shortDescription:
       "Complete infrastructural overhaul, solar electrification, new student desks, clean sanitation facilities, and modern computer lab for 420 rural students.",
     challenge:
@@ -53,7 +53,7 @@ export const projectsData = [
     location: "Thal Desert & Southern Districts",
     date: "2024 - Present",
     status: "Active",
-    coverImage: "/trust/trust_research.jpg",
+    coverImage: "/trust/trust_water_plant.jpg",
     shortDescription:
       "Installing solar-powered reverse osmosis clean drinking water plants producing 10,000 liters of potable water daily per plant for drought-prone regions.",
     challenge:
@@ -76,7 +76,7 @@ export const projectsData = [
     location: "Sindh & Balochistan Flood Affected Belts",
     date: "Seasonal / Annual",
     status: "Completed",
-    coverImage: "/trust/trust_sustainability.jpg",
+    coverImage: "/trust/trust_hero_community.jpg",
     shortDescription:
       "Rapid deployment of 5,000 emergency food rations, emergency dewatering pumps, warm winterization packages, and mobile water filtration units.",
     challenge:
@@ -99,7 +99,7 @@ export const projectsData = [
     location: "Peri-urban Lahore & Sheikhupura",
     date: "2025 - Present",
     status: "Active",
-    coverImage: "/trust/trust_education.jpg",
+    coverImage: "/trust/trust_school_classroom.jpg",
     shortDescription:
       "A 6-month certified vocational course teaching industrial stitching, pattern making, and financial literacy, graduating self-employed female entrepreneurs.",
     challenge:
@@ -122,7 +122,7 @@ export const projectsData = [
     location: "Nationwide Community Hubs",
     date: "Annual Holy Month Initiative",
     status: "Active",
-    coverImage: "/trust/trust_hero_community.jpg",
+    coverImage: "/trust/trust_food_ration.jpg",
     shortDescription:
       "Distribution of comprehensive staple nutrition hampers containing flour, rice, lentils, oil, and dates to ensure dignified fasting for families in need.",
     challenge:

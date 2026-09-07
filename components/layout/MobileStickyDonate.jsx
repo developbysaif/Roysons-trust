@@ -18,10 +18,10 @@ export default function MobileStickyDonate() {
 
         <Link
           href="/donate"
-          className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-gradient-to-r from-[#16A34A] to-[#0F766E] text-white font-black text-sm uppercase tracking-wider shadow-md active:scale-95 transition-all"
+          className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl trust-btn-gradient text-white font-black text-sm uppercase tracking-wider shadow-md active:scale-95 transition-all whitespace-nowrap"
         >
-          <Heart size={16} className="fill-white animate-pulse" />
-          <span>Donate to Roysons Trust</span>
+          <Heart size={16} className="fill-white animate-pulse shrink-0" />
+          <span className="whitespace-nowrap">Donate to Roysons Trust</span>
         </Link>
       </div>
     </div>

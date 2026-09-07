@@ -76,16 +76,51 @@ select:focus-visible {
   background: #042e3a;
 }
 
-/* High-Impact Interactive Hover Tokens */
-.trust-btn-primary {
-  background: linear-gradient(135deg, #042e3a 0%, #00a99d 100%);
+/* High-Impact Interactive Hover Tokens & Radiant Image-2 Gradient */
+.trust-gradient-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #00a99d 55%, #059669 100%);
+}
+
+.trust-btn-gradient {
+  background: linear-gradient(135deg, #0284c7 0%, #00a99d 55%, #059669 100%);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(0, 169, 157, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 169, 157, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.trust-btn-gradient:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #008f84 55%, #047857 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 169, 157, 0.55);
+}
+
+.trust-icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0284c7 0%, #00a99d 55%, #059669 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px -4px rgba(0, 169, 157, 0.35), 0 4px 10px -2px rgba(2, 132, 199, 0.25);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.trust-icon-box:hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 12px 28px -4px rgba(0, 169, 157, 0.55), 0 6px 14px -2px rgba(2, 132, 199, 0.35);
+}
+
+.trust-btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #00a99d 60%, #042e3a 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 169, 157, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
 .trust-btn-primary:hover {
-  background: linear-gradient(135deg, #00a99d 0%, #042e3a 100%);
+  background: linear-gradient(135deg, #042e3a 0%, #00a99d 60%, #0284c7 100%);
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 10px 25px rgba(0, 169, 157, 0.5);
 }
