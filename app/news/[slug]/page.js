@@ -141,13 +141,13 @@ export default async function NewsDetailPage({ params }) {
           {/* Donation Support Box */}
           <div className="mt-12 p-8 rounded-3xl bg-gradient-to-r from-[#042E3A] to-[#0F766E] text-white flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="space-y-1 text-center sm:text-left">
-              <span className="text-xs font-black uppercase tracking-widest text-[#2DD4BF]">
+              <span className="text-xs font-black uppercase tracking-widest text-teal-300">
                 Support Field Work
               </span>
               <h4 className="text-xl font-bold text-white">
                 Help Us Keep These Initiatives Running
               </h4>
-              <p className="text-xs text-teal-100/80">
+              <p className="text-xs sm:text-sm text-slate-100 font-medium">
                 Your donation sustains our doctors, teachers, and emergency relief convoys.
               </p>
             </div>

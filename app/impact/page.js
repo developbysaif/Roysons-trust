@@ -156,7 +156,7 @@ export default function ImpactPage() {
           <h2 className="text-3xl font-black text-white">
             How Every Contribution is Utilized
           </h2>
-          <p className="text-xs sm:text-sm text-teal-100/80 max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm text-slate-100 font-medium max-w-xl mx-auto">
             Thanks to institutional endowments covering administrative overhead, your donations flow directly to the field.
           </p>
 

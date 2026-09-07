@@ -125,25 +125,25 @@ export default function Navbar() {
       {/* Top Helpline Sub-bar */}
       <div className="bg-[#042E3A] text-white text-xs py-2 px-4 sm:px-8 border-b border-teal-900/30">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-4 text-teal-100/80">
+          <div className="flex items-center gap-4 text-slate-200 font-medium">
             <span className="inline-flex items-center gap-1.5">
               <ShieldCheck size={14} className="text-[#00A99D]" />
               <span className="font-semibold text-white">Registered Philanthropic Trust</span>
             </span>
             <span className="hidden sm:inline text-teal-500">•</span>
-            <span className="hidden sm:inline">100% Zakat &amp; Sadaqah Compliant</span>
+            <span className="hidden sm:inline text-slate-100">100% Zakat &amp; Sadaqah Compliant</span>
           </div>
 
-          <div className="flex items-center gap-4 text-teal-100/90 ml-auto">
+          <div className="flex items-center gap-4 text-slate-100 font-medium ml-auto">
             <a
               href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
-              className="inline-flex items-center gap-1.5 hover:text-white transition-colors"
+              className="inline-flex items-center gap-1.5 text-slate-100 hover:text-white transition-colors"
             >
               <PhoneCall size={13} className="text-[#00A99D]" />
               <span>{siteConfig.contact.phone}</span>
             </a>
             <span className="text-teal-700">|</span>
-            <Link href="/transparency" className="hover:text-[#00A99D] transition-colors font-medium">
+            <Link href="/transparency" className="text-teal-300 hover:text-white transition-colors font-medium">
               Audit Reports
             </Link>
           </div>

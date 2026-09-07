@@ -258,10 +258,10 @@ export default function HomePage() {
             <span className="text-xs font-black uppercase tracking-widest text-[#00A99D] bg-white/10 px-3.5 py-1.5 rounded-full border border-[#00A99D]/30">
               Measurable Accountability
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-white mt-4 mb-2">
+            <h2 className="text-3xl sm:text-4xl font-black text-white mt-4 mb-2 drop-shadow-sm">
               Our Impact in Numbers
             </h2>
-            <p className="text-sm text-teal-100/80">
+            <p className="text-sm sm:text-base text-slate-100 font-medium">
               Verified outcomes demonstrating how every contribution transforms real families.
             </p>
           </div>
@@ -275,7 +275,7 @@ export default function HomePage() {
                 <span className="block text-2xl sm:text-3xl font-black text-white mb-1 group-hover:text-[#00A99D] transition-colors">
                   <ImpactCounter target={item.value} suffix={item.suffix} />
                 </span>
-                <span className="block text-xs font-bold text-teal-200">
+                <span className="block text-xs font-bold text-teal-100 group-hover:text-white transition-colors">
                   {item.label}
                 </span>
               </div>
@@ -391,11 +391,11 @@ export default function HomePage() {
             <Heart size={28} className="fill-white" />
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight drop-shadow-sm">
             Be the Catalyst for Change Today
           </h2>
 
-          <p className="text-sm sm:text-base text-teal-100/80 leading-relaxed max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-slate-100 leading-relaxed max-w-xl mx-auto font-medium">
             Whether you choose to sponsor a child’s education, fund a life-saving medical surgery, or volunteer your skills in our community camps, your support creates generational hope.
           </p>
 

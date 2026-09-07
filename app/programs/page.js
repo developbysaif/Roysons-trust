@@ -43,7 +43,7 @@ export default function ProgramsPage() {
           <h2 className="text-2xl sm:text-3xl font-black text-white">
             Support a Dedicated Cause
           </h2>
-          <p className="text-xs sm:text-sm text-teal-100/80 max-w-lg mx-auto">
+          <p className="text-xs sm:text-sm text-slate-100 font-medium max-w-lg mx-auto">
             You can direct your Zakat or Sadaqah donation to any specific program of your choice with complete transparency.
           </p>
           <div className="pt-2">

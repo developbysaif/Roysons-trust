@@ -86,7 +86,7 @@ export default function DonatePage() {
                 <h3 className="text-base font-bold text-white">
                   Need Help with Your Donation?
                 </h3>
-                <p className="text-xs text-teal-100/75 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-100 font-medium leading-relaxed">
                   Our donor relations desk is available to assist you with wire instructions, custom allocations, or cash collections:
                 </p>
                 <div className="pt-2 space-y-1 text-xs">

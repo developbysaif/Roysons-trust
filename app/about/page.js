@@ -192,7 +192,7 @@ export default function AboutPage() {
           <h2 className="text-2xl sm:text-3xl font-black text-white">
             Join Hands With Roysons Trust
           </h2>
-          <p className="text-xs sm:text-sm text-teal-100/80 max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm text-slate-100 font-medium max-w-xl mx-auto">
             Discover how you can contribute as an individual donor, corporate CSR partner, or community volunteer.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">

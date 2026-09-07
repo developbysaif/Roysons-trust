@@ -50,7 +50,7 @@ export default function Footer() {
             <h3 className="text-xl sm:text-2xl font-black text-white mt-1">
               Subscribe to Roysons Trust Field Dispatches
             </h3>
-            <p className="text-xs sm:text-sm text-teal-100/70 mt-1">
+            <p className="text-xs sm:text-sm text-slate-100 mt-1">
               Receive quarterly updates on scholarships funded, medical camps, and community water projects.
             </p>
           </div>
@@ -99,24 +99,24 @@ export default function Footer() {
               </div>
             </Link>
 
-            <p className="text-sm text-teal-100/75 leading-relaxed max-w-md">
+            <p className="text-sm sm:text-base text-slate-100 leading-relaxed max-w-md font-normal">
               Roysons Trust is a registered, non-profit humanitarian institution dedicated to advancing human dignity through sustainable education, healthcare access, nutrition security, and community infrastructure.
             </p>
 
-            <div className="space-y-2.5 pt-1 text-xs text-teal-100/80">
+            <div className="space-y-2.5 pt-1 text-xs sm:text-sm text-slate-200">
               <div className="flex items-start gap-2.5">
-                <MapPin size={15} className="text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span>{siteConfig.contact.address}</span>
+                <MapPin size={16} className="text-[#00A99D] flex-shrink-0 mt-0.5" />
+                <span className="text-slate-100">{siteConfig.contact.address}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone size={15} className="text-emerald-400 flex-shrink-0" />
-                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="hover:text-white transition-colors">
+                <Phone size={16} className="text-[#00A99D] flex-shrink-0" />
+                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="text-slate-100 hover:text-white transition-colors">
                   {siteConfig.contact.phone}
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail size={15} className="text-emerald-400 flex-shrink-0" />
-                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-white transition-colors">
+                <Mail size={16} className="text-[#00A99D] flex-shrink-0" />
+                <a href={`mailto:${siteConfig.contact.email}`} className="text-slate-100 hover:text-white transition-colors">
                   {siteConfig.contact.email}
                 </a>
               </div>
@@ -150,72 +150,72 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-xs font-black uppercase tracking-widest text-[#2DD4BF]">
+            <h4 className="text-xs font-black uppercase tracking-widest text-teal-300">
               Quick Links
             </h4>
-            <ul className="space-y-2.5 text-xs text-teal-100/75">
+            <ul className="space-y-2.5 text-xs text-slate-200 font-medium">
               <li>
-                <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
+                <Link href="/about" className="hover:text-white hover:underline transition-colors">About Us</Link>
               </li>
               <li>
-                <Link href="/programs" className="hover:text-white transition-colors">Our Programs</Link>
+                <Link href="/programs" className="hover:text-white hover:underline transition-colors">Our Programs</Link>
               </li>
               <li>
-                <Link href="/projects" className="hover:text-white transition-colors">Our Projects</Link>
+                <Link href="/projects" className="hover:text-white hover:underline transition-colors">Our Projects</Link>
               </li>
               <li>
-                <Link href="/impact" className="hover:text-white transition-colors">Our Impact</Link>
+                <Link href="/impact" className="hover:text-white hover:underline transition-colors">Our Impact</Link>
               </li>
               <li>
-                <Link href="/donate" className="hover:text-white transition-colors">Donate Now</Link>
+                <Link href="/donate" className="hover:text-white hover:underline transition-colors">Donate Now</Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link>
+                <Link href="/contact" className="hover:text-white hover:underline transition-colors">Contact Us</Link>
               </li>
             </ul>
           </div>
 
           {/* Column 3: Resources */}
           <div className="space-y-4">
-            <h4 className="text-xs font-black uppercase tracking-widest text-[#2DD4BF]">
+            <h4 className="text-xs font-black uppercase tracking-widest text-teal-300">
               Resources
             </h4>
-            <ul className="space-y-2.5 text-xs text-teal-100/75">
+            <ul className="space-y-2.5 text-xs text-slate-200 font-medium">
               <li>
-                <Link href="/news" className="hover:text-white transition-colors">News &amp; Updates</Link>
+                <Link href="/news" className="hover:text-white hover:underline transition-colors">News &amp; Updates</Link>
               </li>
               <li>
-                <Link href="/gallery" className="hover:text-white transition-colors">Media Gallery</Link>
+                <Link href="/gallery" className="hover:text-white hover:underline transition-colors">Media Gallery</Link>
               </li>
               <li>
-                <Link href="/transparency" className="hover:text-white transition-colors">Annual Reports</Link>
+                <Link href="/transparency" className="hover:text-white hover:underline transition-colors">Annual Reports</Link>
               </li>
               <li>
-                <Link href="/certifications" className="hover:text-white transition-colors">Registrations &amp; Certifications</Link>
+                <Link href="/certifications" className="hover:text-white hover:underline transition-colors">Registrations &amp; Certifications</Link>
               </li>
               <li>
-                <Link href="/faqs" className="hover:text-white transition-colors">FAQs</Link>
+                <Link href="/faqs" className="hover:text-white hover:underline transition-colors">FAQs</Link>
               </li>
             </ul>
           </div>
 
           {/* Column 4: Get Involved */}
           <div className="space-y-4">
-            <h4 className="text-xs font-black uppercase tracking-widest text-[#2DD4BF]">
+            <h4 className="text-xs font-black uppercase tracking-widest text-teal-300">
               Get Involved
             </h4>
-            <ul className="space-y-2.5 text-xs text-teal-100/75">
+            <ul className="space-y-2.5 text-xs text-slate-200 font-medium">
               <li>
-                <Link href="/volunteer" className="hover:text-white transition-colors">Become a Volunteer</Link>
+                <Link href="/volunteer" className="hover:text-white hover:underline transition-colors">Become a Volunteer</Link>
               </li>
               <li>
-                <Link href="/partnerships" className="hover:text-white transition-colors">Corporate CSR Partnerships</Link>
+                <Link href="/partnerships" className="hover:text-white hover:underline transition-colors">Corporate CSR Partnerships</Link>
               </li>
               <li>
-                <Link href="/get-involved" className="hover:text-white transition-colors">Ways to Help</Link>
+                <Link href="/get-involved" className="hover:text-white hover:underline transition-colors">Ways to Help</Link>
               </li>
               <li>
-                <Link href="/stories" className="hover:text-white transition-colors">Stories of Change</Link>
+                <Link href="/stories" className="hover:text-white hover:underline transition-colors">Stories of Change</Link>
               </li>
               <li className="pt-2">
                 <Link
@@ -232,22 +232,22 @@ export default function Footer() {
       </div>
 
       {/* Bottom Legal & Copyright Bar */}
-      <div className="border-t border-teal-800/40 bg-[#021c23] py-5 px-4 sm:px-6 lg:px-8 text-xs text-teal-200/60 relative z-10">
+      <div className="border-t border-teal-800/40 bg-[#021c23] py-5 px-4 sm:px-6 lg:px-8 text-xs text-slate-300 relative z-10">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p suppressHydrationWarning className="text-center sm:text-left">
+          <p suppressHydrationWarning className="text-center sm:text-left text-slate-300">
             &copy; {new Date().getFullYear()} Roysons Trust. All rights reserved.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-            <Link href="/privacy" className="hover:text-white transition-colors">
+            <Link href="/privacy" className="text-slate-300 hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <span className="text-teal-800">•</span>
-            <Link href="/terms" className="hover:text-white transition-colors">
+            <span className="text-teal-700">•</span>
+            <Link href="/terms" className="text-slate-300 hover:text-white transition-colors">
               Terms &amp; Conditions
             </Link>
-            <span className="text-teal-800">•</span>
-            <Link href="/safeguarding" className="hover:text-white transition-colors">
+            <span className="text-teal-700">•</span>
+            <Link href="/safeguarding" className="text-slate-300 hover:text-white transition-colors">
               Safeguarding Policy
             </Link>
           </div>

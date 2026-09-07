@@ -186,13 +186,13 @@ export default async function ProgramDetailPage({ params }) {
 
               {/* How You Can Help Box */}
               <div className="bg-[#042E3A] text-white p-6 sm:p-8 rounded-3xl space-y-4">
-                <span className="text-xs font-black uppercase tracking-widest text-[#2DD4BF]">
+                <span className="text-xs font-black uppercase tracking-widest text-teal-300">
                   Take Action
                 </span>
                 <h4 className="text-lg font-bold text-white">
                   Sponsor This Program
                 </h4>
-                <p className="text-xs text-teal-100/80 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-100 font-medium leading-relaxed">
                   Direct your contribution specifically toward this cause. Receive verified progress updates and receipt.
                 </p>
                 <Link

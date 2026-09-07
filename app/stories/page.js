@@ -50,7 +50,7 @@ export default function StoriesPage() {
           <h3 className="text-2xl sm:text-3xl font-black text-white">
             Help Us Write the Next Story of Hope
           </h3>
-          <p className="text-xs sm:text-sm text-teal-100/80 max-w-lg mx-auto">
+          <p className="text-xs sm:text-sm text-slate-100 font-medium max-w-lg mx-auto">
             Your single contribution could be the turning point in a child’s education or a mother’s path to self-sufficiency.
           </p>
           <div className="pt-2">

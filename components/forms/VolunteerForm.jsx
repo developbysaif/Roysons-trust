@@ -25,14 +25,14 @@ export default function VolunteerForm() {
   return (
     <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
       <div className="bg-gradient-to-r from-[#042E3A] to-[#0F766E] p-6 sm:p-8 text-white">
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-teal-200 text-xs font-bold uppercase tracking-wider mb-2">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-teal-300 text-xs font-bold uppercase tracking-wider mb-2">
           <Users size={12} className="text-emerald-400" />
           Community Action
         </span>
         <h2 className="text-2xl sm:text-3xl font-black text-white">
           Apply as a Volunteer
         </h2>
-        <p className="text-xs sm:text-sm text-teal-100/80 mt-1 max-w-lg">
+        <p className="text-xs sm:text-sm text-slate-100 font-medium mt-1 max-w-lg">
           Join our network of compassionate changemakers dedicating time, medical skills, teaching, and relief operations.
         </p>
       </div>

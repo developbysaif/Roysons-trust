@@ -103,21 +103,21 @@ export default function DonationForm() {
       <div className="bg-gradient-to-r from-[#042E3A] via-[#022028] to-[#00A99D] p-6 sm:p-8 text-white relative">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-teal-200 text-xs font-bold uppercase tracking-wider mb-2">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-teal-300 text-xs font-bold uppercase tracking-wider mb-2">
               <Heart size={12} className="fill-[#00A99D] text-[#00A99D]" />
               Transparent Welfare Giving
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-white">
               Make Your Donation
             </h2>
-            <p className="text-xs sm:text-sm text-teal-100/80 mt-1 max-w-lg">
+            <p className="text-xs sm:text-sm text-slate-100 font-medium mt-1 max-w-lg">
               Every single rupee directly empowers vulnerable children, sick patients, and distressed families.
             </p>
           </div>
 
-          <div className="hidden sm:flex flex-col items-end text-xs text-teal-200/90 font-medium">
+          <div className="hidden sm:flex flex-col items-end text-xs text-slate-100 font-medium">
             <span className="inline-flex items-center gap-1">
-              <ShieldCheck size={14} className="text-[#00A99D]" />
+              <ShieldCheck size={14} className="text-teal-300" />
               100% Audited
             </span>
             <span>Zero Zakat Administrative Cuts</span>
