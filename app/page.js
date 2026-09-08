@@ -36,7 +36,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col w-full overflow-hidden">
       {/* 1. HERO SECTION */}
-      <section className="relative w-full min-h-[620px] lg:min-h-[700px] flex items-center bg-gradient-to-b from-[#f0fdfa] via-[#f8fafc] to-white pt-6 pb-10 lg:py-14 overflow-hidden">
+      <section className="relative w-full flex items-center bg-gradient-to-b from-[#f0fdfa] via-[#f8fafc] to-white pt-8 pb-6 lg:pt-10 lg:pb-8 overflow-hidden">
         {/* Ambient Glows */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[360px] bg-gradient-to-b from-[#00A99D]/20 to-transparent rounded-full blur-3xl pointer-events-none" />
         <div className="absolute top-1/3 -right-20 w-80 h-80 bg-[#00A99D]/10 rounded-full blur-3xl pointer-events-none" />
@@ -44,7 +44,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Narrative Column (7 cols) */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left reveal-item">
+            <div className="lg:col-span-7 space-y-4 text-center lg:text-left reveal-item">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-[#00A99D]/30 shadow-xs backdrop-blur-md">
                 <span className="w-2 h-2 rounded-full bg-[#00A99D] animate-pulse" />
                 <span className="text-xs font-black uppercase tracking-widest text-[#042E3A]">
@@ -85,7 +85,7 @@ export default function HomePage() {
               </div>
 
               {/* Verified Trust Badges */}
-              <div className="pt-6 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-600 font-medium">
+              <div className="pt-3 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-600 font-medium">
                 <span className="inline-flex items-center gap-1.5">
                   <ShieldCheck size={16} className="text-[#00A99D]" />
                   <span>100% Verified Zakat Distribution</span>
@@ -105,7 +105,7 @@ export default function HomePage() {
             <div className="lg:col-span-5 relative reveal-item">
               <div className="relative mx-auto max-w-md lg:max-w-none">
                 {/* Main Hero Photo */}
-                <div className="relative h-[380px] sm:h-[460px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <div className="relative h-[300px] sm:h-[380px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                   <Image
                     src="/trust/trust_hero_community.jpg"
                     alt="Roysons Trust Community Welfare in Pakistan"
@@ -146,7 +146,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. TRUST INTRODUCTION (SPLIT LAYOUT) */}
-      <section className="py-10 sm:py-12 bg-white">
+      <section className="py-8 sm:py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Text */}
