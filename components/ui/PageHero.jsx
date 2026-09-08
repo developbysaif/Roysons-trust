@@ -8,7 +8,7 @@ export default function PageHero({
   breadcrumbs = [],
 }) {
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#f0fdfa] via-[#f8fafc] to-white border-b border-slate-200/60 pt-12 pb-16 sm:py-20 overflow-hidden">
+    <section className="relative w-full bg-gradient-to-b from-[#f0fdfa] via-[#f8fafc] to-white border-b border-slate-200/60 pt-6 pb-8 sm:py-10 overflow-hidden">
       {/* Subtle Ambient Lighting Glow */}
       <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[650px] h-[300px] bg-gradient-to-b from-teal-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-10 right-10 w-72 h-72 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none" />

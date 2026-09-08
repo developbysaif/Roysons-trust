@@ -57,7 +57,7 @@ export default function AboutPage() {
       {/* Mission & Vision Section */}
       <section id="mission" className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
             {/* Mission Box */}
             <div className="p-8 sm:p-10 rounded-3xl bg-emerald-50/60 border border-emerald-200/80 flex flex-col justify-between">
               <div className="space-y-4">

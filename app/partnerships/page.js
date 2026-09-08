@@ -89,7 +89,7 @@ export default function PartnershipsPage() {
       {/* CSR Model Highlights */}
       <section id="corporate" className="py-16 bg-[#F8FAFC] border-y border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             <div className="lg:col-span-6 space-y-5">
               <span className="text-xs font-black uppercase tracking-widest text-[#0F766E] bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
                 Strategic Collaboration

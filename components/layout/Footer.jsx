@@ -41,7 +41,7 @@ export default function Footer() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Top Pre-Footer Newsletter Bar */}
-      <div className="border-b border-teal-800/40 bg-[#03232c] py-8 px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="border-b border-teal-800/40 bg-[#03232c] py-5 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="max-w-xl text-center md:text-left">
             <span className="text-xs font-black uppercase tracking-widest text-[#2DD4BF]">
@@ -83,8 +83,8 @@ export default function Footer() {
       </div>
 
       {/* Main 4-Column Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {/* Column 1: Organization Identity (2 cols on lg) */}
           <div className="lg:col-span-2 space-y-5">
             <Link href="/" className="inline-block">

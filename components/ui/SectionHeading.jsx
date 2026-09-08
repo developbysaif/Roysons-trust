@@ -8,7 +8,7 @@ export default function SectionHeading({
   const isCentered = align === "center";
 
   return (
-    <div className={`mb-12 ${isCentered ? "text-center mx-auto" : "text-left"} ${maxWidth}`}>
+    <div className={`mb-7 ${isCentered ? "text-center mx-auto" : "text-left"} ${maxWidth}`}>
       {badge && (
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00A99D]/10 border border-[#00A99D]/30 text-xs font-black uppercase tracking-widest text-[#042E3A] mb-3">
           <span className="w-2 h-2 rounded-full bg-[#00A99D] animate-pulse" />

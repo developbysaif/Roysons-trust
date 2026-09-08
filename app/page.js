@@ -36,7 +36,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col w-full overflow-hidden">
       {/* 1. HERO SECTION */}
-      <section className="relative w-full min-h-[620px] lg:min-h-[700px] flex items-center bg-gradient-to-b from-[#f0fdfa] via-[#f8fafc] to-white pt-10 pb-16 lg:py-24 overflow-hidden">
+      <section className="relative w-full min-h-[620px] lg:min-h-[700px] flex items-center bg-gradient-to-b from-[#f0fdfa] via-[#f8fafc] to-white pt-6 pb-10 lg:py-14 overflow-hidden">
         {/* Ambient Glows */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[360px] bg-gradient-to-b from-[#00A99D]/20 to-transparent rounded-full blur-3xl pointer-events-none" />
         <div className="absolute top-1/3 -right-20 w-80 h-80 bg-[#00A99D]/10 rounded-full blur-3xl pointer-events-none" />
@@ -146,7 +146,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. TRUST INTRODUCTION (SPLIT LAYOUT) */}
-      <section className="py-20 sm:py-24 bg-white">
+      <section className="py-10 sm:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Text */}
@@ -223,7 +223,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. CORE PROGRAMS (AREAS OF IMPACT) */}
-      <section className="py-20 sm:py-24 bg-[#F8FAFC] border-y border-slate-200/60 reveal-item">
+      <section className="py-10 sm:py-12 bg-[#F8FAFC] border-y border-slate-200/60 reveal-item">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="OUR FOCUS AREAS"
@@ -250,11 +250,11 @@ export default function HomePage() {
       </section>
 
       {/* 4. LIVE IMPACT DASHBOARD & METRIC COUNTERS */}
-      <section className="py-20 bg-gradient-to-r from-[#042E3A] via-[#022028] to-[#042E3A] text-white relative overflow-hidden reveal-item">
+      <section className="py-10 bg-gradient-to-r from-[#042E3A] via-[#022028] to-[#042E3A] text-white relative overflow-hidden reveal-item">
         <div className="absolute inset-0 bg-[radial-gradient(#00A99D_1px,transparent_1px)] [background-size:24px_24px] opacity-15 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <span className="text-xs font-black uppercase tracking-widest text-[#00A99D] bg-white/10 px-3.5 py-1.5 rounded-full border border-[#00A99D]/30">
               Measurable Accountability
             </span>
@@ -295,9 +295,9 @@ export default function HomePage() {
       </section>
 
       {/* 5. FEATURED PROJECTS */}
-      <section className="py-20 sm:py-24 bg-white reveal-item">
+      <section className="py-10 sm:py-12 bg-white reveal-item">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-7 gap-4">
             <div>
               <span className="text-xs font-black uppercase tracking-widest text-[#042E3A] bg-[#00A99D]/10 px-3.5 py-1.5 rounded-full border border-[#00A99D]/30">
                 Active Interventions
@@ -324,7 +324,7 @@ export default function HomePage() {
       </section>
 
       {/* 6. STORIES OF HOPE (FEATURED TRANSFORMATION) */}
-      <section className="py-20 bg-[#F8FAFC] border-t border-slate-200/60 reveal-item">
+      <section className="py-10 bg-[#F8FAFC] border-t border-slate-200/60 reveal-item">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="STORIES OF CHANGE"
@@ -349,9 +349,9 @@ export default function HomePage() {
       </section>
 
       {/* 7. TRANSPARENCY & GOVERNANCE ASSURANCE BANNER */}
-      <section className="py-16 bg-white border-t border-slate-200/60 reveal-item">
+      <section className="py-10 bg-white border-t border-slate-200/60 reveal-item">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-[#00A99D]/10 via-[#042E3A]/5 to-white rounded-3xl border border-[#00A99D]/30 p-8 sm:p-12 shadow-sm">
+          <div className="bg-gradient-to-r from-[#00A99D]/10 via-[#042E3A]/5 to-white rounded-3xl border border-[#00A99D]/30 p-5 sm:p-8 shadow-sm">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8 space-y-3">
                 <span className="text-xs font-black uppercase tracking-widest text-[#00A99D] font-bold">
@@ -385,7 +385,7 @@ export default function HomePage() {
       </section>
 
       {/* 8. DIRECT ENGAGEMENT CALL TO ACTION */}
-      <section className="py-20 bg-gradient-to-b from-[#042E3A] via-[#022028] to-[#042E3A] text-white relative reveal-item">
+      <section className="py-10 bg-gradient-to-b from-[#042E3A] via-[#022028] to-[#042E3A] text-white relative reveal-item">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl trust-gradient-primary text-white shadow-xl">
             <Heart size={28} className="fill-white" />

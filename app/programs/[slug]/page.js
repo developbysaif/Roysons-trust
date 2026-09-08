@@ -58,7 +58,7 @@ export default async function ProgramDetailPage({ params }) {
       {/* Program Summary & Hero Image */}
       <section className="py-14 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             <div className="lg:col-span-7 space-y-5">
               <span className="text-xs font-black uppercase tracking-widest text-[#0F766E] bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
                 Program Overview
@@ -140,7 +140,7 @@ export default async function ProgramDetailPage({ params }) {
       {/* What We Do & Who We Support */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* What We Do (7 cols) */}
             <div className="lg:col-span-7 space-y-6">
               <span className="text-xs font-black uppercase tracking-widest text-[#16A34A]">

@@ -31,7 +31,7 @@ export default function DonatePage() {
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             {/* Left: Main Interactive Donation Experience (8 cols) */}
             <div className="lg:col-span-8">
               <DonationForm />
