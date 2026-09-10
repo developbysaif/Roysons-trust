@@ -88,12 +88,12 @@ export default function Footer() {
           {/* Column 1: Organization Identity (2 cols on lg) */}
           <div className="lg:col-span-2 space-y-5">
             <Link href="/" className="inline-block">
-              <div className="relative w-56 h-18 sm:w-68 sm:h-22 bg-white p-3 rounded-2xl shadow-lg border border-teal-800/30">
+              <div className="relative w-56 h-18 sm:w-68 sm:h-22">
                 <Image
                   src="/trust/Roysons-05.png"
                   alt="ROYSONS Trust"
                   fill
-                  className="object-contain object-left p-1.5"
+                  className="object-contain object-left"
                   sizes="280px"
                 />
               </div>
