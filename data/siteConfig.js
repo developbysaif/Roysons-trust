@@ -45,7 +45,6 @@ export const siteConfig = {
       { name: "About Roysons Trust", href: "/about", description: "Our heritage, purpose, and founding principles" },
       { name: "Mission & Vision", href: "/about#mission", description: "Our enduring commitment to societal welfare" },
       { name: "Leadership & Trustees", href: "/leadership", description: "Meet our dedicated Board of Trustees" },
-      { name: "Registration & Certifications", href: "/certifications", description: "Accountability, legal status, and NTN compliance" },
     ],
     ourWork: [
       { name: "Our Programs", href: "/programs", description: "Long-term sustainable impact initiatives" },
