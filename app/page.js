@@ -123,27 +123,27 @@ export default function HomePage() {
                 Making a Difference Where It Matters Most
               </h2>
 
-              <p className="text-base text-slate-600 leading-relaxed">
+              <p className="text-lg text-slate-600 leading-relaxed">
                 Roysons Trust is founded on the immutable belief that true prosperity is measured by the welfare of the most vulnerable. Through rigorous programmatic governance, active field monitoring, and community partnership, we deliver life-altering interventions in education, clinical healthcare, clean water security, and immediate humanitarian relief.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1 hover:border-[#00A99D]/40 transition-colors">
-                  <div className="flex items-center gap-2 text-sm font-bold text-[#042E3A]">
-                    <CheckCircle2 size={16} className="text-[#00A99D]" />
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1.5 hover:border-[#00A99D]/40 transition-colors">
+                  <div className="flex items-center gap-2 text-base font-bold text-[#042E3A]">
+                    <CheckCircle2 size={18} className="text-[#00A99D]" />
                     <span>Dignity First</span>
                   </div>
-                  <p className="text-xs text-slate-500 leading-relaxed">
+                  <p className="text-sm text-slate-500 leading-relaxed">
                     Beneficiaries receive support with the utmost respect and confidentiality.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1 hover:border-[#00A99D]/40 transition-colors">
-                  <div className="flex items-center gap-2 text-sm font-bold text-[#042E3A]">
-                    <CheckCircle2 size={16} className="text-[#00A99D]" />
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1.5 hover:border-[#00A99D]/40 transition-colors">
+                  <div className="flex items-center gap-2 text-base font-bold text-[#042E3A]">
+                    <CheckCircle2 size={18} className="text-[#00A99D]" />
                     <span>Zero Leakage</span>
                   </div>
-                  <p className="text-xs text-slate-500 leading-relaxed">
+                  <p className="text-sm text-slate-500 leading-relaxed">
                     Strict segregation of Zakat and public funds with verified delivery.
                   </p>
                 </div>
@@ -152,10 +152,10 @@ export default function HomePage() {
               <div className="pt-2">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 text-sm font-black uppercase tracking-wider text-[#042E3A] hover:text-[#00A99D] transition-colors"
+                  className="inline-flex items-center gap-2 text-base font-black uppercase tracking-wider text-[#042E3A] hover:text-[#00A99D] transition-colors"
                 >
                   <span>Learn About Us</span>
-                  <ArrowRight size={16} className="text-[#00A99D]" />
+                  <ArrowRight size={18} className="text-[#00A99D]" />
                 </Link>
               </div>
             </div>
