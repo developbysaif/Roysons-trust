@@ -33,7 +33,6 @@ const DROPDOWN_ICONS = {
   "About Roysons Trust": Building2,
   "Mission & Vision": Target,
   "Leadership & Trustees": Users,
-  "Registration & Certifications": Award,
   // Our Work
   "Our Programs": BookOpen,
   "Our Projects": Briefcase,
@@ -51,12 +50,6 @@ const DROPDOWN_ICONS = {
 };
 
 const DROPDOWN_FOOTERS = {
-  About: {
-    badge: "Official Legal Registration",
-    text: "Verified NTN & Shariah Compliant Status",
-    href: "/certifications",
-    icon: ShieldCheck,
-  },
   "Our Work": {
     badge: "Measurable Reach",
     text: "Explore Our Live 2026 Impact Dashboard",
@@ -162,23 +155,15 @@ export default function Navbar() {
           <div className="flex items-center justify-between gap-2 xl:gap-4">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 group focus:outline-none py-1 shrink-0">
-              <div className="relative w-44 h-12 sm:w-48 sm:h-14 lg:w-52 lg:h-15 xl:w-56 xl:h-16 shrink-0 transition-transform duration-300 group-hover:scale-[1.02]">
+              <div className="relative w-52 h-14 sm:w-60 sm:h-16 lg:w-68 lg:h-[72px] xl:w-76 xl:h-20 shrink-0 transition-transform duration-300 group-hover:scale-[1.02]">
                 <Image
                   src="/trust/Roysons-05.png"
                   alt="ROYSONS Trust"
                   fill
                   priority
                   className="object-contain object-left"
-                  sizes="(max-width: 768px) 190px, 240px"
+                  sizes="(max-width: 768px) 220px, (max-width: 1024px) 260px, 300px"
                 />
-              </div>
-              <div className="hidden 2xl:flex flex-col border-l-2 border-[#00A99D]/40 pl-2.5">
-                <span className="text-xs font-black uppercase tracking-widest text-[#042E3A]">
-                  TRUST
-                </span>
-                <span className="text-[10px] text-slate-500 font-semibold tracking-tight whitespace-nowrap">
-                  Humanitarian &amp; Social Welfare
-                </span>
               </div>
             </Link>
 
