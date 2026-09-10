@@ -133,7 +133,7 @@ export default function HomePage() {
                     <CheckCircle2 size={18} className="text-[#00A99D]" />
                     <span>Dignity First</span>
                   </div>
-                  <p className="text-sm text-slate-500 leading-relaxed">
+                  <p className="text-base text-slate-500 leading-relaxed">
                     Beneficiaries receive support with the utmost respect and confidentiality.
                   </p>
                 </div>
@@ -143,7 +143,7 @@ export default function HomePage() {
                     <CheckCircle2 size={18} className="text-[#00A99D]" />
                     <span>Zero Leakage</span>
                   </div>
-                  <p className="text-sm text-slate-500 leading-relaxed">
+                  <p className="text-base text-slate-500 leading-relaxed">
                     Strict segregation of Zakat and public funds with verified delivery.
                   </p>
                 </div>
