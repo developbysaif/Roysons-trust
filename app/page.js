@@ -85,17 +85,17 @@ export default function HomePage() {
               </div>
 
               {/* Verified Trust Badges */}
-              <div className="pt-3 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-600 font-medium">
-                <span className="inline-flex items-center gap-1.5">
-                  <ShieldCheck size={16} className="text-[#00A99D]" />
+              <div className="pt-3 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-slate-600 font-semibold">
+                <span className="inline-flex items-center gap-2">
+                  <ShieldCheck size={18} className="text-[#00A99D]" />
                   <span>100% Verified Zakat Distribution</span>
                 </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <CheckCircle2 size={16} className="text-[#00A99D]" />
+                <span className="inline-flex items-center gap-2">
+                  <CheckCircle2 size={18} className="text-[#00A99D]" />
                   <span>Audited Financial Statements</span>
                 </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <HandHeart size={16} className="text-[#042E3A]" />
+                <span className="inline-flex items-center gap-2">
+                  <HandHeart size={18} className="text-[#042E3A]" />
                   <span>Direct Beneficiary Delivery</span>
                 </span>
               </div>
