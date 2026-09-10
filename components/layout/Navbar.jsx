@@ -171,7 +171,7 @@ export default function Navbar() {
             <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 flex-nowrap">
               <Link
                 href="/"
-                className={`whitespace-nowrap px-3 py-2 text-[13px] xl:text-sm font-bold rounded-xl transition-all duration-200 ${
+                className={`whitespace-nowrap px-3 py-2 text-[15px] xl:text-base font-bold rounded-xl transition-all duration-200 ${
                   pathname === "/"
                     ? "text-[#00A99D] bg-teal-50/90 shadow-xs"
                     : "text-[#042E3A] hover:text-[#00A99D] hover:bg-teal-50/60"
@@ -194,7 +194,7 @@ export default function Navbar() {
                   >
                     <button
                       type="button"
-                      className={`whitespace-nowrap inline-flex items-center gap-1.5 px-2.5 xl:px-3 py-2 text-[13px] xl:text-sm font-bold rounded-xl transition-all duration-200 ${
+                      className={`whitespace-nowrap inline-flex items-center gap-1.5 px-2.5 xl:px-3 py-2 text-[15px] xl:text-base font-bold rounded-xl transition-all duration-200 ${
                         isDropdownOpen || isGroupActive
                           ? "text-[#00A99D] bg-teal-50/90 shadow-xs"
                           : "text-[#042E3A] hover:text-[#00A99D] hover:bg-teal-50/60"
@@ -293,7 +293,7 @@ export default function Navbar() {
 
               <Link
                 href="/contact"
-                className={`whitespace-nowrap px-3 py-2 text-[13px] xl:text-sm font-bold rounded-xl transition-all duration-200 ${
+                className={`whitespace-nowrap px-3 py-2 text-[15px] xl:text-base font-bold rounded-xl transition-all duration-200 ${
                   pathname === "/contact"
                     ? "text-[#00A99D] bg-teal-50/90 shadow-xs"
                     : "text-[#042E3A] hover:text-[#00A99D] hover:bg-teal-50/60"
