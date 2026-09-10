@@ -22,6 +22,7 @@ import ProgramCard from "@/components/ui/ProgramCard";
 import ProjectCard from "@/components/ui/ProjectCard";
 import ImpactCounter from "@/components/ui/ImpactCounter";
 import StoryCard from "@/components/ui/StoryCard";
+import HeroSlider from "@/components/ui/HeroSlider";
 import { programsData } from "@/data/programsData";
 import { projectsData } from "@/data/projectsData";
 import { impactData } from "@/data/impactData";
@@ -101,46 +102,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Visual Column (5 cols) */}
-            <div className="lg:col-span-5 relative reveal-item">
-              <div className="relative mx-auto max-w-md lg:max-w-none">
-                {/* Main Hero Photo */}
-                <div className="relative h-[300px] sm:h-[380px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                  <Image
-                    src="/trust/trust_hero_community.jpg"
-                    alt="Roysons Trust Community Welfare in Pakistan"
-                    fill
-                    priority
-                    className="object-cover object-center"
-                    sizes="(max-width: 768px) 100vw, 45vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#042E3A]/60 via-transparent to-transparent" />
-                </div>
-
-                {/* Floating Impact Card with Image 2 Gradient Icon */}
-                <div className="absolute -bottom-6 -left-4 sm:-left-8 bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-slate-100 max-w-[240px] sm:max-w-[260px] animate-in fade-in slide-in-from-bottom duration-700">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-2xl trust-gradient-primary text-white flex items-center justify-center shrink-0 shadow-md">
-                      <HeartPulse size={24} />
-                    </div>
-                    <div>
-                      <span className="block text-xl font-black text-[#042E3A]">
-                        10,000+
-                      </span>
-                      <span className="block text-xs text-slate-500 font-semibold leading-tight">
-                        Lives Directly Touched Across Pakistan
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating Transparent Tag */}
-                <div className="hidden sm:flex absolute -top-4 -right-4 bg-[#042E3A] text-white text-xs font-black uppercase tracking-wider px-4 py-2 rounded-xl shadow-lg border border-[#00A99D]/40 items-center gap-1.5">
-                  <Sparkles size={14} className="text-[#00A99D]" />
-                  <span>Purpose-Led Welfare</span>
-                </div>
-              </div>
-            </div>
+            {/* Right Visual Column (5 cols) — Image Slider */}
+            <HeroSlider />
           </div>
         </div>
       </section>
