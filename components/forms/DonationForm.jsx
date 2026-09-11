@@ -36,6 +36,7 @@ const PAYMENT_METHODS = [
 
 export default function DonationForm() {
   const [selectedCause, setSelectedCause] = useState("General Welfare Fund");
+  const [frequency, setFrequency] = useState("One-Time");
   const [amount, setAmount] = useState(5000);
   const [customAmount, setCustomAmount] = useState("");
   const [isCustom, setIsCustom] = useState(false);
@@ -46,8 +47,7 @@ export default function DonationForm() {
     fullName: "",
     email: "",
     phone: "",
-    address: "",
-    notes: "",
+    message: "",
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -100,18 +100,18 @@ export default function DonationForm() {
   return (
     <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-[#042E3A] via-[#022028] to-[#00A99D] p-6 sm:p-8 text-white relative">
+      <div className="bg-black p-6 sm:p-8 text-white relative border-b border-neutral-800">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-teal-300 text-xs font-bold uppercase tracking-wider mb-2">
-              <Heart size={12} className="fill-[#00A99D] text-[#00A99D]" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-neutral-200 text-xs font-semibold uppercase tracking-wider mb-2 border border-white/15">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#009688]" />
               Transparent Welfare Giving
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-white">
+            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
               Make Your Donation
             </h2>
-            <p className="text-xs sm:text-sm text-slate-100 font-medium mt-1 max-w-lg">
-              Every single rupee directly empowers vulnerable children, sick patients, and distressed families.
+            <p className="text-xs sm:text-sm text-neutral-300 font-normal mt-1 max-w-lg">
+              Every single contribution directly empowers vulnerable children, sick patients, and distressed families.
             </p>
           </div>
 
@@ -127,10 +127,36 @@ export default function DonationForm() {
 
       {!isSubmitted ? (
         <form onSubmit={handleSubmit} className="p-6 sm:p-8 space-y-8">
-          {/* Step 1: Select Cause */}
+          {/* Step 1: Donation Frequency */}
           <div>
-            <label className="block text-xs font-black uppercase tracking-wider text-[#042E3A] mb-3">
-              1. Select Giving Category / Cause
+            <label className="block text-xs font-black uppercase tracking-wider text-[#0f172a] mb-2.5">
+              1. Donation Frequency
+            </label>
+            <div className="grid grid-cols-2 gap-3 max-w-md">
+              {["One-Time", "Monthly"].map((freq) => {
+                const isSelected = frequency === freq;
+                return (
+                  <button
+                    key={freq}
+                    type="button"
+                    onClick={() => setFrequency(freq)}
+                    className={`py-3 px-4 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all cursor-pointer ${
+                      isSelected
+                        ? "bg-[#0f172a] text-white shadow-md ring-2 ring-[#2563eb]"
+                        : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                    }`}
+                  >
+                    {freq} Support
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Step 2: Select Cause */}
+          <div>
+            <label className="block text-xs font-black uppercase tracking-wider text-[#0f172a] mb-3">
+              2. Select Program / Cause
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
               {CAUSES.map((cause) => {
@@ -140,14 +166,14 @@ export default function DonationForm() {
                     key={cause}
                     type="button"
                     onClick={() => setSelectedCause(cause)}
-                    className={`text-left p-3.5 rounded-xl border text-xs font-bold transition-all flex items-center justify-between ${
+                    className={`text-left p-3.5 rounded-xl border text-xs font-bold transition-all flex items-center justify-between cursor-pointer ${
                       isSelected
-                        ? "border-[#00A99D] bg-[#00A99D]/10 text-[#042E3A] shadow-sm ring-2 ring-[#00A99D]"
+                        ? "border-[#2563eb] bg-[#eff6ff] text-[#0f172a] shadow-xs ring-2 ring-[#2563eb]"
                         : "border-slate-200 bg-slate-50/50 text-slate-700 hover:bg-slate-100"
                     }`}
                   >
                     <span>{cause}</span>
-                    {isSelected && <CheckCircle2 size={16} className="text-[#00A99D] flex-shrink-0" />}
+                    {isSelected && <CheckCircle2 size={16} className="text-[#2563eb] flex-shrink-0" />}
                   </button>
                 );
               })}
@@ -356,49 +382,49 @@ export default function DonationForm() {
 
             <div>
               <label className="block text-xs font-semibold text-slate-700 mb-1">
-                Special Allocation Instructions / Notes (Optional)
+                Message / Allocation Notes (Optional)
               </label>
               <textarea
                 rows={2}
-                placeholder="e.g. Please dedicate this toward flood relief or a specific school..."
-                value={formData.notes}
-                onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#16A34A] focus:outline-none"
+                placeholder="e.g. Please dedicate this toward education scholarships or emergency medical care..."
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#2563eb] focus:outline-none"
               />
             </div>
           </div>
 
           {/* Submission Notice & Button */}
           <div className="pt-2 space-y-4">
-            <div className="flex items-start gap-2.5 p-3.5 bg-[#00A99D]/10 border border-[#00A99D]/30 rounded-xl text-xs text-slate-700">
-              <ShieldCheck size={16} className="text-[#00A99D] flex-shrink-0 mt-0.5" />
+            <div className="flex items-start gap-2.5 p-3.5 bg-[#eff6ff] border border-blue-200 rounded-xl text-xs text-slate-700">
+              <ShieldCheck size={16} className="text-[#2563eb] flex-shrink-0 mt-0.5" />
               <span>
-                Every contribution is handled with transparency and directed toward meaningful community support. You will receive an official tax deductible acknowledgment once verified.
+                Every contribution is handled with transparency and directed toward verified programs. You will receive an official tax-deductible acknowledgment once verified.
               </span>
             </div>
 
             <button
               type="submit"
-              className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-[#042E3A] via-[#022028] to-[#00A99D] hover:opacity-95 text-white font-black uppercase tracking-wider text-sm sm:text-base shadow-lg hover:shadow-xl shadow-[#042E3A]/30 transition-all flex items-center justify-center gap-2 transform active:scale-98"
+              className="btn-emerald w-full py-4 px-6 rounded-xl text-white font-extrabold uppercase tracking-wider text-sm sm:text-base shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
-              <Heart size={18} className="fill-[#00A99D] text-[#00A99D] animate-pulse" />
-              <span>CONFIRM DONATION PLEDGE (PKR {amount ? amount.toLocaleString() : 0})</span>
+              <Heart size={18} className="fill-white" />
+              <span>CONFIRM {frequency.toUpperCase()} DONATION (PKR {amount ? amount.toLocaleString() : 0})</span>
             </button>
           </div>
         </form>
       ) : (
         /* Success State & Receipt View */
         <div className="p-8 sm:p-12 text-center space-y-6">
-          <div className="w-16 h-16 bg-[#00A99D]/15 text-[#00A99D] rounded-full flex items-center justify-center mx-auto shadow-inner">
+          <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-inner">
             <CheckCircle2 size={36} />
           </div>
 
           <div className="max-w-md mx-auto space-y-2">
-            <h3 className="text-2xl font-black text-[#042E3A]">
-              JazakAllah Khair! Donation Pledged
+            <h3 className="text-2xl font-black text-[#0f172a]">
+              Donation Pledged Successfully
             </h3>
             <p className="text-sm text-slate-600">
-              Thank you, <strong className="text-slate-900">{formData.fullName}</strong>. Your generous pledge has been registered with Roysons Trust.
+              Thank you, <strong className="text-slate-900">{formData.fullName}</strong>. Your generous support has been recorded with ROYSONS TRUST.
             </p>
           </div>
 
@@ -408,13 +434,23 @@ export default function DonationForm() {
               <span className="font-mono font-bold text-slate-900">{referenceId}</span>
             </div>
             <div className="flex justify-between border-b border-slate-200 pb-2">
+              <span className="text-slate-500 font-semibold">Donation Frequency:</span>
+              <span className="font-bold text-[#2563eb]">{frequency}</span>
+            </div>
+            <div className="flex justify-between border-b border-slate-200 pb-2">
               <span className="text-slate-500 font-semibold">Allocated Cause:</span>
-              <span className="font-bold text-[#00A99D]">{selectedCause}</span>
+              <span className="font-bold text-[#0f766e]">{selectedCause}</span>
             </div>
             <div className="flex justify-between border-b border-slate-200 pb-2">
               <span className="text-slate-500 font-semibold">Amount Pledged:</span>
               <span className="font-black text-slate-900 text-sm">PKR {amount.toLocaleString()}</span>
             </div>
+            {formData.message && (
+              <div className="flex justify-between border-b border-slate-200 pb-2">
+                <span className="text-slate-500 font-semibold">Message:</span>
+                <span className="text-slate-700 italic max-w-[200px] truncate">{formData.message}</span>
+              </div>
+            )}
             <div className="flex justify-between">
               <span className="text-slate-500 font-semibold">Receipt Sent To:</span>
               <span className="font-medium text-slate-700">{formData.email}</span>

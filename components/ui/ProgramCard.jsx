@@ -1,72 +1,74 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
   GraduationCap,
   HeartPulse,
-  Utensils,
-  ShieldAlert,
   Building,
+  HandHeart,
   Sparkles,
+  Layers,
 } from "lucide-react";
 
-const ICON_MAP = {
-  GraduationCap,
-  HeartPulse,
-  Utensils,
-  ShieldAlert,
-  Building,
-  Sparkles,
+const CATEGORY_ICONS = {
+  "Education & Skills": GraduationCap,
+  "Healthcare & Wellbeing": HeartPulse,
+  "Community Development": Building,
+  "Youth Empowerment": Sparkles,
+  "Humanitarian Support": HandHeart,
+  "Sustainable Development": Layers,
 };
 
 export default function ProgramCard({ program }) {
-  const IconComponent = ICON_MAP[program.icon] || Sparkles;
+  const IconComponent = CATEGORY_ICONS[program.category] || Sparkles;
 
   return (
-    <div className="group relative bg-white rounded-3xl border-2 border-slate-200/80 shadow-sm trust-card-hover flex flex-col overflow-hidden">
-      {/* Top Image Container with Zoom */}
-      <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-100">
+    <div className="group relative bg-white rounded-3xl border border-neutral-200/90 shadow-xs hover:shadow-xl hover:-translate-y-1.5 hover:border-neutral-400/80 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+      {/* Top Image Banner with Zoom */}
+      <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-neutral-100">
         <Image
-          src={program.coverImage}
+          src={program.hero?.coverImage || program.coverImage || "/trust/roysons_trust_hero.jpg"}
           alt={program.title}
           fill
-          className="object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+          className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        {/* Subtle Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#042E3A]/85 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+        {/* Cinematic Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-        {/* Floating Category Badge with Image 2 Gradient Icon */}
-        <div className="absolute top-3.5 left-3.5 flex items-center gap-2">
-          <div className="w-10 h-10 rounded-xl trust-gradient-primary flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
-            <IconComponent size={18} />
+        {/* Floating Category Badge */}
+        <div className="absolute top-4 left-4 flex items-center gap-2">
+          <div className="w-9 h-9 rounded-xl bg-white/95 backdrop-blur-md text-[#111111] flex items-center justify-center shadow-md transform group-hover:scale-108 transition-transform duration-300">
+            <IconComponent size={18} className="text-[#009688]" />
           </div>
-          <span className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-xs font-black uppercase tracking-wider text-[#042E3A] shadow-md border border-[#00A99D]/30">
+          <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider border border-white/20">
             {program.shortTitle}
           </span>
         </div>
       </div>
 
-      {/* Card Body */}
+      {/* Card Content Body */}
       <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
-          <h3 className="text-xl sm:text-2xl font-black text-[#042E3A] group-hover:text-[#00A99D] transition-colors mb-2.5 line-clamp-1">
-            {program.title}
+          <h3 className="text-xl sm:text-2xl font-bold text-[#111111] group-hover:text-[#009688] transition-colors mb-2.5 line-clamp-1">
+            {program.shortTitle}
           </h3>
 
-          <p className="text-sm text-slate-600 leading-relaxed line-clamp-3 mb-5">
-            {program.summary}
+          <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed line-clamp-3 mb-4 font-normal">
+            {program.tagline || program.hero?.description}
           </p>
 
-          {/* Quick Metrics Chips */}
+          {/* Quick Metrics */}
           {program.stats && (
-            <div className="grid grid-cols-2 gap-2.5 pt-3 pb-2 border-t border-slate-100">
+            <div className="grid grid-cols-2 gap-2 pt-3 border-t border-neutral-100">
               {program.stats.slice(0, 2).map((s, idx) => (
-                <div key={idx} className="bg-teal-50/40 rounded-xl p-2.5 text-center border border-teal-100/60">
-                  <span className="block text-base font-black text-[#00A99D]">
+                <div key={idx} className="bg-neutral-50 rounded-xl p-2.5 text-center border border-neutral-200/60">
+                  <span className="block text-sm font-bold text-[#111111]">
                     {s.value}
                   </span>
-                  <span className="block text-xs text-slate-500 font-medium truncate">
+                  <span className="block text-[11px] text-neutral-500 font-medium truncate">
                     {s.label}
                   </span>
                 </div>
@@ -76,17 +78,20 @@ export default function ProgramCard({ program }) {
         </div>
 
         {/* Action Button */}
-        <div className="pt-3 border-t border-slate-100">
+        <div className="pt-4 border-t border-neutral-100 flex items-center justify-between">
           <Link
             href={`/programs/${program.slug}`}
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-black uppercase tracking-wider text-[#042E3A] group-hover:text-[#00A99D] transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-bold tracking-wide text-[#111111] group-hover:text-[#009688] transition-colors"
           >
-            <span>Learn More About {program.shortTitle}</span>
+            <span>Explore Program</span>
             <ArrowRight
               size={15}
-              className="transform group-hover:translate-x-2 transition-transform text-[#00A99D]"
+              className="transform group-hover:translate-x-1.5 transition-transform text-[#009688]"
             />
           </Link>
+          <span className="text-[11px] font-semibold text-neutral-400 uppercase tracking-wider">
+            Verified
+          </span>
         </div>
       </div>
     </div>

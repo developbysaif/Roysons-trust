@@ -1,113 +1,238 @@
-import PageHero from "@/components/ui/PageHero";
-import SectionHeading from "@/components/ui/SectionHeading";
-import ImpactCounter from "@/components/ui/ImpactCounter";
-import { impactData } from "@/data/impactData";
 import Link from "next/link";
 import {
   Users,
   FolderCheck,
   HeartPulse,
-  Home,
+  Building,
   GraduationCap,
-  Droplets,
+  Sparkles,
   ShieldCheck,
   MapPin,
   CheckCircle2,
-  PieChart,
   ArrowRight,
   Heart,
+  HandHeart,
+  Layers,
+  Leaf,
+  Clock,
+  Compass,
 } from "lucide-react";
+import PageHero from "@/components/ui/PageHero";
+import SectionHeading from "@/components/ui/SectionHeading";
+import ImpactCounter from "@/components/ui/ImpactCounter";
+import ImpactMap from "@/components/ui/ImpactMap";
+import { impactData } from "@/data/impactData";
 
 export const metadata = {
-  title: "Our Impact – Verified Metrics & Transparency Dashboard",
+  title: "Our Impact – Measuring What Matters | ROYSONS TRUST",
   description:
-    "Explore our impact metrics, lives touched, clean water output, academic scholarships, and UN Sustainable Development Goal alignment.",
+    "Because meaningful change should be visible, measurable and accountable. Explore verified impact counters, impact areas, geographic map, and sequential process.",
 };
 
-const ICONS = {
-  Users,
-  FolderCheck,
-  HeartPulse,
-  Home,
-  GraduationCap,
-  Droplets,
-};
+const IMPACT_COUNTERS = [
+  { label: "Communities Reached", value: 25, suffix: "+", desc: "Towns and villages with active verified interventions" },
+  { label: "People Supported", value: 50000, suffix: "+", desc: "Beneficiaries directly touched across programs" },
+  { label: "Projects Delivered", value: 100, suffix: "+", desc: "Completed and ongoing community social projects" },
+  { label: "Volunteers Engaged", value: 500, suffix: "+", desc: "Medical professionals, teachers & field workers" },
+  { label: "Partnerships", value: 18, suffix: "+", desc: "Verified corporate, municipal & NGO alliances" },
+  { label: "Regions Served", value: 12, suffix: "+", desc: "Intervention districts across Punjab, Sindh & Balochistan" },
+];
+
+const IMPACT_AREAS = [
+  {
+    title: "Education",
+    desc: "1,200+ academic scholarships awarded and 18 digital computer labs deployed to foster generational literacy.",
+    icon: GraduationCap,
+    stats: "94% Retention Rate",
+    href: "/programs/education",
+  },
+  {
+    title: "Healthcare",
+    desc: "35,000+ patient consultations, free cataract surgeries, and weekly mobile clinic circuits.",
+    icon: HeartPulse,
+    stats: "65+ Free Clinics",
+    href: "/programs/healthcare",
+  },
+  {
+    title: "Community Development",
+    desc: "22 solar-powered RO water plants delivering over 150,000 liters of pure drinking water daily.",
+    icon: Building,
+    stats: "22 Clean Water Plants",
+    href: "/programs/community-development",
+  },
+  {
+    title: "Humanitarian Support",
+    desc: "28,000+ people provided emergency food hampers, winter survival packs, and disaster shelter.",
+    icon: HandHeart,
+    stats: "15,000+ Rations Given",
+    href: "/programs/humanitarian-support",
+  },
+  {
+    title: "Youth",
+    desc: "1,850+ young adults and women graduated from technical stitching and digital freelancing academies.",
+    icon: Sparkles,
+    stats: "310+ Micro-Enterprises",
+    href: "/programs/youth-empowerment",
+  },
+  {
+    title: "Sustainability",
+    desc: "Off-grid solar energy installations and regional community tree plantations protecting natural ecology.",
+    icon: Leaf,
+    stats: "120 kW Solar Installed",
+    href: "/programs/sustainable-development",
+  },
+];
+
+const IMPACT_PROCESS = [
+  { step: "01", name: "Need", desc: "Empirical needs assessment and community consultation to identify acute vulnerabilities." },
+  { step: "02", name: "Action", desc: "Mobilization of verified resources, budget approvals, and dedicated field coordinators." },
+  { step: "03", name: "Implementation", desc: "Direct, dignified delivery of medical care, school rebuilds, or water plants." },
+  { step: "04", name: "Measurement", desc: "Auditing of disbursements, beneficiary receipt logs, and healthcare progress indicators." },
+  { step: "05", name: "Learning", desc: "Iterative review with local community elders to resolve operational bottlenecks." },
+  { step: "06", name: "Long-Term Impact", desc: "Transitioning operational custody to community committees for enduring self-reliance." },
+];
 
 export default function ImpactPage() {
   return (
     <div className="flex flex-col w-full">
+      {/* 1. Hero */}
       <PageHero
         badge="TRANSPARENT ACCOUNTABILITY"
-        title="Our Measurable Impact"
-        description="Every initiative at Roysons Trust is guided by verified data, independent audits, and long-term societal outcomes across underserved communities."
+        title="Measuring What Matters"
+        description="Because meaningful change should be visible, measurable and accountable."
         breadcrumbs={[{ label: "Our Impact" }]}
       />
 
-      {/* Main Metric Cards */}
-      <section className="py-16 sm:py-20 bg-white">
+      {/* 2. Impact Counters (Animated Counting) */}
+      <section className="py-16 sm:py-20 bg-white border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            badge="VERIFIED OUTCOMES"
-            title="Key Impact Indicators"
-            subtitle="Verified milestones reflecting our on-ground progress in education, clinical healthcare, hunger alleviation, and disaster response."
+            badge="VERIFIED STATISTICS"
+            title="Verified Impact Metrics"
+            subtitle="Audited statistics reflecting our on-ground progress across verified humanitarian corridors."
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {impactData.metrics.map((m) => {
-              const IconComp = ICONS[m.icon] || Users;
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {IMPACT_COUNTERS.map((c, idx) => (
+              <div
+                key={idx}
+                className="bg-slate-50 hover:bg-white rounded-3xl p-8 border border-slate-200 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 space-y-3 flex flex-col justify-between"
+              >
+                <div>
+                  <span className="block text-3xl sm:text-4xl lg:text-5xl font-black text-[#2563eb]">
+                    <ImpactCounter target={c.value} suffix={c.suffix} />
+                  </span>
+                  <h3 className="text-base sm:text-lg font-bold text-[#0f172a] mt-2">
+                    {c.label}
+                  </h3>
+                  <p className="text-xs text-slate-500 leading-relaxed mt-1">
+                    {c.desc}
+                  </p>
+                </div>
+                <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block pt-2 border-t border-slate-200/60">
+                  [Verified Fiduciary Metric]
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-xs text-slate-500 mt-8">
+            Note: Statistics are audited and updated on a quarterly cycle in accordance with non-profit regulatory standards.
+          </p>
+        </div>
+      </section>
+
+      {/* 3. Impact Areas (Interactive Visual Cards) */}
+      <section className="py-20 bg-[#f8fafc] border-b border-slate-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            badge="CORE PORTFOLIO"
+            title="Impact Areas"
+            subtitle="Explore how ROYSONS TRUST concentrates resources where societal need is most pressing."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {IMPACT_AREAS.map((area, idx) => {
+              const Icon = area.icon;
               return (
                 <div
-                  key={m.id}
-                  className="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-[#0F766E] shadow-sm hover:shadow-xl transition-all space-y-4"
+                  key={idx}
+                  className="group bg-white rounded-3xl p-8 border border-slate-200 shadow-xs hover:shadow-xl hover:-translate-y-2 hover:border-[#0f766e] transition-all duration-300 space-y-4 flex flex-col justify-between"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-emerald-100/80 text-[#16A34A] flex items-center justify-center">
-                    <IconComp size={28} />
+                  <div className="space-y-4">
+                    <div className="w-14 h-14 rounded-2xl bg-teal-50 text-[#0f766e] group-hover:scale-110 flex items-center justify-center transition-transform shadow-xs">
+                      <Icon size={26} />
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#0f172a] group-hover:text-[#0f766e] transition-colors">
+                      {area.title}
+                    </h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      {area.desc}
+                    </p>
                   </div>
-                  <div>
-                    <span className="block text-3xl sm:text-4xl font-black text-[#042E3A]">
-                      <ImpactCounter target={m.value} suffix={m.suffix} />
+
+                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span className="text-xs font-bold text-[#2563eb]">
+                      {area.stats}
                     </span>
-                    <span className="block text-base font-bold text-[#0F766E] mt-1">
-                      {m.label}
-                    </span>
+                    <Link
+                      href={area.href}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0f766e] hover:text-[#2563eb] transition-colors"
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight size={13} />
+                    </Link>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
-                    {m.description}
-                  </p>
                 </div>
               );
             })}
           </div>
-
-          <div className="mt-8 p-4 rounded-xl bg-teal-50 border border-teal-200 text-center text-xs text-slate-600 max-w-2xl mx-auto">
-            <span className="font-semibold text-[#0F766E]">Note on Data Verification: </span>
-            Metrics are audited and updated on a quarterly basis in accordance with statutory non-profit standards.
-          </div>
         </div>
       </section>
 
-      {/* Geographic Reach */}
-      <section className="py-16 bg-[#F8FAFC] border-y border-slate-200/60">
+      {/* 4. Interactive Impact Map */}
+      <section className="py-20 sm:py-24 bg-white border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="GEOGRAPHIC FOOTPRINT"
-            title="Where We Serve Across Pakistan"
-            subtitle="Our mobile healthcare vans, clean water plants, and emergency food convoys reach deep into rural and peri-urban districts."
+            title="Interactive Impact Map"
+            subtitle="Verified on-ground operations hubs, mobile health routes, and clean water filtration plants."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {impactData.geographicReach.map((geo, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-                <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#0F766E]">
-                  <MapPin size={16} />
-                  <span>{geo.region}</span>
+          <ImpactMap />
+        </div>
+      </section>
+
+      {/* 5. Impact Process (Sequential Step Progression) */}
+      <section className="py-20 sm:py-24 bg-[#f8fafc] border-b border-slate-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            badge="METHODOLOGY"
+            title="The Impact Process"
+            subtitle="How every verified initiative moves systematically from initial identification to permanent, generational change."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 pt-4">
+            {IMPACT_PROCESS.map((step, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all space-y-3 flex flex-col justify-between group"
+              >
+                <div className="space-y-2">
+                  <span className="block text-2xl font-black text-[#2563eb]">
+                    {step.step}
+                  </span>
+                  <h4 className="text-base font-bold text-[#0f172a] group-hover:text-[#0f766e] transition-colors">
+                    {step.name}
+                  </h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {step.desc}
+                  </p>
                 </div>
-                <h4 className="text-base font-bold text-[#042E3A]">
-                  {geo.coverage}
-                </h4>
-                <div className="pt-2 border-t border-slate-100 text-xs text-slate-500">
-                  <span className="font-semibold text-slate-700 block mb-0.5">Focus Areas:</span>
-                  <span>{geo.focus}</span>
+
+                <div className="pt-3 border-t border-slate-100 text-[11px] font-semibold text-emerald-600 flex items-center gap-1">
+                  <CheckCircle2 size={12} />
+                  <span>Sequential Phase</span>
                 </div>
               </div>
             ))}
@@ -115,26 +240,26 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      {/* SDG Alignment */}
-      <section className="py-16 sm:py-20 bg-white">
+      {/* 6. SDG Alignment */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            badge="GLOBAL DEVELOPMENT"
+            badge="GLOBAL TARGETS"
             title="Aligned with UN Sustainable Development Goals"
-            subtitle="Roysons Trust designs interventions that contribute directly to global targets for poverty alleviation, universal health, and gender equity."
+            subtitle="ROYSONS TRUST interventions contribute directly to global targets for poverty alleviation, universal health, and environmental sustainability."
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {impactData.sdgAlignment.map((sdg) => (
               <div
                 key={sdg.number}
-                className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all flex items-start gap-4"
+                className="p-6 rounded-3xl bg-white border border-slate-200 shadow-xs hover:shadow-md transition-all flex items-start gap-4"
               >
-                <div className={`w-12 h-12 rounded-xl text-white font-black text-lg flex items-center justify-center flex-shrink-0 ${sdg.color}`}>
+                <div className={`w-12 h-12 rounded-2xl text-white font-black text-lg flex items-center justify-center flex-shrink-0 ${sdg.color}`}>
                   {sdg.number}
                 </div>
                 <div>
-                  <h4 className="text-base font-bold text-[#042E3A]">
+                  <h4 className="text-base font-bold text-[#0f172a]">
                     {sdg.name}
                   </h4>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
@@ -144,42 +269,14 @@ export default function ImpactPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Fund Utilization */}
-      <section className="py-16 bg-[#042E3A] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
-          <span className="text-xs font-black uppercase tracking-widest text-[#2DD4BF]">
-            Fund Stewardship
-          </span>
-          <h2 className="text-3xl font-black text-white">
-            How Every Contribution is Utilized
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-100 font-medium max-w-xl mx-auto">
-            Thanks to institutional endowments covering administrative overhead, your donations flow directly to the field.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-left">
-            {impactData.fundUtilization.map((f, idx) => (
-              <div key={idx} className="bg-white/5 border border-teal-500/20 p-5 rounded-2xl space-y-2">
-                <span className="text-3xl font-black text-emerald-400 block">
-                  {f.percentage}%
-                </span>
-                <span className="text-xs font-bold text-white block">
-                  {f.category}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div className="pt-6">
+          <div className="mt-12 text-center">
             <Link
               href="/donate"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#16A34A] hover:bg-[#15803D] text-white font-black text-xs uppercase tracking-wider shadow-lg transition-all"
+              className="btn-emerald inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-white text-xs font-bold uppercase tracking-wider shadow-md"
             >
               <Heart size={15} className="fill-white" />
-              <span>Contribute to Roysons Trust</span>
+              <span>Contribute to Measurable Change</span>
             </Link>
           </div>
         </div>

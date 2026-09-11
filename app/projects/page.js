@@ -8,7 +8,15 @@ import { projectsData } from "@/data/projectsData";
 import Link from "next/link";
 import { Heart, Filter } from "lucide-react";
 
-const CATEGORIES = ["All", "Education", "Healthcare", "Relief", "Community"];
+const CATEGORIES = [
+  "All",
+  "Education",
+  "Healthcare",
+  "Community",
+  "Humanitarian",
+  "Youth",
+  "Development",
+];
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -16,33 +24,34 @@ export default function ProjectsPage() {
   const filteredProjects =
     activeCategory === "All"
       ? projectsData
-      : projectsData.filter((p) => p.category === activeCategory);
+      : projectsData.filter((p) => p.category.toLowerCase() === activeCategory.toLowerCase());
 
   return (
     <div className="flex flex-col w-full">
+      {/* Hero */}
       <PageHero
-        badge="FIELD INITIATIVES"
-        title="Our Active & Completed Projects"
-        description="Discover our targeted humanitarian interventions across rural schools, medical clinics, flood rehabilitation zones, and clean water networks."
+        badge="ON-GROUND ACTION"
+        title="Projects That Turn Vision Into Action"
+        description="Explore our field-tested initiatives delivering measurable community transformation across education, clinical healthcare, clean water, and disaster resilience."
         breadcrumbs={[{ label: "Our Projects" }]}
       />
 
       <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Filter Bar */}
+          {/* Category Filtering Tabs */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-            <span className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 mr-2">
-              <Filter size={14} className="text-[#0F766E]" />
-              Filter by Sector:
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 mr-2">
+              <Filter size={14} className="text-[#0f766e]" />
+              <span>Filter by Sector:</span>
             </span>
             {CATEGORIES.map((cat) => (
               <button
                 key={cat}
                 type="button"
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                className={`px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                   activeCategory === cat
-                    ? "bg-[#042E3A] text-white shadow-md"
+                    ? "bg-[#0f172a] text-white shadow-md"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >
@@ -57,30 +66,24 @@ export default function ProjectsPage() {
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
-
-          {filteredProjects.length === 0 && (
-            <div className="text-center py-16 text-slate-500">
-              <p className="text-sm">No projects currently found in this category.</p>
-            </div>
-          )}
         </div>
       </section>
 
-      {/* Direct Project Sponsorship CTA */}
-      <section className="py-16 bg-[#F8FAFC] border-t border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
-          <h3 className="text-2xl font-black text-[#042E3A]">
-            Have a Specific Project You Wish to Sponsor?
+      {/* Direct Project Support Banner */}
+      <section className="py-16 bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-4">
+          <h3 className="text-2xl sm:text-3xl font-black text-white">
+            Support a Dedicated Community Project
           </h3>
-          <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
-            Individuals and corporate CSR departments can fully or partially sponsor designated school buildings, water plants, or medical camps with dedicated naming rights and audit logs.
+          <p className="text-xs sm:text-sm text-slate-200 max-w-xl mx-auto">
+            Direct your donation to fund clean water filtration, school digital labs, or emergency medical units with zero leakage and complete verification.
           </p>
           <div className="pt-2">
             <Link
               href="/donate"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#16A34A] to-[#0F766E] text-white font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all"
+              className="btn-emerald inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-white font-black text-xs uppercase tracking-wider shadow-lg"
             >
-              <Heart size={14} className="fill-white" />
+              <Heart size={15} className="fill-white" />
               <span>Sponsor a Project</span>
             </Link>
           </div>

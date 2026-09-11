@@ -9,6 +9,7 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
+    organization: "",
     subject: "General Inquiry",
     message: "",
   });
@@ -26,7 +27,7 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-bold text-slate-700 mb-1">
-                Your Full Name *
+                Full Name *
               </label>
               <input
                 type="text"
@@ -34,7 +35,7 @@ export default function ContactForm() {
                 placeholder="e.g. Asad Khan"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#16A34A] focus:outline-none"
+                className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#2563eb] focus:outline-none"
               />
             </div>
 
@@ -48,7 +49,7 @@ export default function ContactForm() {
                 placeholder="name@example.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#16A34A] focus:outline-none"
+                className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#2563eb] focus:outline-none"
               />
             </div>
 
@@ -61,67 +62,90 @@ export default function ContactForm() {
                 placeholder="+92 300 1234567"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#16A34A] focus:outline-none"
+                className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#2563eb] focus:outline-none"
               />
             </div>
 
             <div>
               <label className="block text-xs font-bold text-slate-700 mb-1">
-                Inquiry Topic / Department
+                Organization (Optional)
               </label>
-              <select
-                value={formData.subject}
-                onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#16A34A] focus:outline-none bg-white"
-              >
-                <option value="General Inquiry">General Information</option>
-                <option value="Donation & Zakat Verification">Donation &amp; Zakat Inquiries</option>
-                <option value="Beneficiary Case Submission">Patient / Student Case Assessment</option>
-                <option value="Corporate CSR Collaboration">Corporate CSR Partnerships</option>
-                <option value="Media & Press">Media &amp; Public Relations</option>
-              </select>
+              <input
+                type="text"
+                placeholder="e.g. CSR Foundation / Enterprise"
+                value={formData.organization}
+                onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
+                className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#2563eb] focus:outline-none"
+              />
             </div>
           </div>
 
           <div>
             <label className="block text-xs font-bold text-slate-700 mb-1">
-              Your Message *
+              Subject
+            </label>
+            <select
+              value={formData.subject}
+              onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+              className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#2563eb] focus:outline-none bg-white"
+            >
+              <option value="General Inquiry">General Inquiry</option>
+              <option value="Donation & Zakat Verification">Donation &amp; Zakat Verification</option>
+              <option value="Corporate CSR Partnership">Corporate CSR Partnership</option>
+              <option value="Volunteer Application">Volunteer Application</option>
+              <option value="Program Sponsorship">Program Sponsorship</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-xs font-bold text-slate-700 mb-1">
+              Message *
             </label>
             <textarea
-              rows={4}
               required
-              placeholder="How can we assist you today? Please share any relevant details..."
+              rows={4}
+              placeholder="How can we assist you or collaborate?"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#16A34A] focus:outline-none"
+              className="w-full p-3 rounded-xl border border-slate-200 text-sm focus:border-[#2563eb] focus:outline-none"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full py-3.5 px-6 rounded-xl bg-[#042E3A] hover:bg-[#0F766E] text-white font-black uppercase tracking-wider text-sm shadow-md transition-all flex items-center justify-center gap-2"
+            className="btn-primary w-full py-4 rounded-xl text-white font-extrabold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
           >
             <Send size={16} />
-            <span>Send Message to Secretariat</span>
+            <span>Submit Inquiry</span>
           </button>
         </form>
       ) : (
-        <div className="py-8 text-center space-y-3">
-          <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+        <div className="text-center py-10 space-y-4">
+          <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-inner">
             <CheckCircle2 size={32} />
           </div>
-          <h3 className="text-xl font-black text-[#042E3A]">
-            Message Dispatched Successfully
+          <h3 className="text-xl font-black text-[#0f172a]">
+            Inquiry Submitted Successfully
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 max-w-sm mx-auto">
-            Thank you, <strong>{formData.name}</strong>. Your inquiry has been routed to our secretariat. We will reply within 24 business hours.
+            Thank you, <strong className="text-slate-900">{formData.name}</strong>. A representative from the ROYSONS TRUST secretariat will contact you shortly.
           </p>
           <button
             type="button"
-            onClick={() => setSubmitted(false)}
-            className="mt-2 text-xs font-bold text-[#0F766E] hover:underline"
+            onClick={() => {
+              setSubmitted(false);
+              setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                organization: "",
+                subject: "General Inquiry",
+                message: "",
+              });
+            }}
+            className="px-6 py-2.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-50 cursor-pointer"
           >
-            Send Another Inquiry
+            Send Another Message
           </button>
         </div>
       )}

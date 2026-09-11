@@ -40,17 +40,30 @@ export const siteConfig = {
     note: "All contributions are fully audited and eligible for tax credit under applicable charitable trust regulations.",
   },
 
+  mainNav: [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Mission & Vision", href: "/mission-vision" },
+    { name: "Leadership & Trustees", href: "/leadership-trustees" },
+    { name: "Our Programs", href: "/programs" },
+    { name: "Our Projects", href: "/projects" },
+    { name: "Our Impact", href: "/impact" },
+    { name: "Success Stories", href: "/success-stories" },
+    { name: "Donate Now", href: "/donate" },
+    { name: "Contact", href: "/contact" },
+  ],
+
   nav: {
     about: [
       { name: "About Roysons Trust", href: "/about", description: "Our heritage, purpose, and founding principles" },
-      { name: "Mission & Vision", href: "/about#mission", description: "Our enduring commitment to societal welfare" },
-      { name: "Leadership & Trustees", href: "/leadership", description: "Meet our dedicated Board of Trustees" },
+      { name: "Mission & Vision", href: "/mission-vision", description: "Our enduring commitment to societal welfare" },
+      { name: "Leadership & Trustees", href: "/leadership-trustees", description: "Meet our dedicated Board of Trustees" },
     ],
     ourWork: [
       { name: "Our Programs", href: "/programs", description: "Long-term sustainable impact initiatives" },
       { name: "Our Projects", href: "/projects", description: "Active on-ground interventions across regions" },
       { name: "Our Impact", href: "/impact", description: "Verified metrics, beneficiaries, and SDG reach" },
-      { name: "Success Stories", href: "/stories", description: "Real stories of dignity, growth, and hope" },
+      { name: "Success Stories", href: "/success-stories", description: "Real stories of dignity, growth, and hope" },
     ],
     getInvolved: [
       { name: "Donate Now", href: "/donate", description: "Support education, healthcare, and humanitarian relief" },
