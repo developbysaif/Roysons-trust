@@ -47,11 +47,11 @@ export default function Navbar() {
   return (
     <>
       {/* Top Utility Helpline Bar */}
-      <div className="text-[11px] sm:text-xs py-1.5 px-4 sm:px-8 border-b bg-[#0a0a0a] text-neutral-300 border-neutral-800 hidden md:block">
+      <div className="text-xs md:text-[13px] lg:text-sm py-2 px-4 sm:px-8 border-b bg-[#0a0a0a] text-neutral-300 border-neutral-800 hidden md:block">
         <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
           <div className="flex items-center gap-4 font-medium">
-            <span className="inline-flex items-center gap-1.5">
-              <ShieldCheck size={13} className="text-[#00A99D]" />
+            <span className="inline-flex items-center gap-2">
+              <ShieldCheck size={15} className="text-[#00A99D]" />
               <span className="font-semibold text-white">ROYSONS TRUST</span>
               <span className="text-neutral-400">— Registered Global Humanitarian Foundation</span>
             </span>
@@ -60,17 +60,17 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
             <a
               href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
-              className="inline-flex items-center gap-1.5 hover:text-[#00A99D] transition-colors"
+              className="inline-flex items-center gap-2 hover:text-[#00A99D] transition-colors"
             >
-              <PhoneCall size={12} className="text-[#00A99D]" />
+              <PhoneCall size={14} className="text-[#00A99D]" />
               <span>{siteConfig.contact.phone}</span>
             </a>
             <span className="text-neutral-600">|</span>
             <a
               href={`mailto:${siteConfig.contact.email}`}
-              className="inline-flex items-center gap-1.5 hover:text-[#00A99D] transition-colors"
+              className="inline-flex items-center gap-2 hover:text-[#00A99D] transition-colors"
             >
-              <Mail size={12} className="text-[#00A99D]" />
+              <Mail size={14} className="text-[#00A99D]" />
               <span>{siteConfig.contact.email}</span>
             </a>
             <span className="text-neutral-600">|</span>
@@ -91,7 +91,7 @@ export default function Navbar() {
               <Link href="/" className="flex items-center shrink-0 group focus:outline-none">
                 <div className="flex items-center transition-transform group-hover:scale-[1.02]">
                   <Image
-                    src="/trust/Roysons-05.png"
+                    src="/trust/royson-trust.png"
                     alt="ROYSONS TRUST"
                     width={320}
                     height={64}

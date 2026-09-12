@@ -86,7 +86,7 @@ export default function Footer() {
             <Link href="/" className="inline-block">
               <div className="relative w-64 h-16 sm:w-72 sm:h-18 lg:w-80 lg:h-20">
                 <Image
-                  src="/trust/Roysons-05.png"
+                  src="/trust/royson-trust.png"
                   alt="ROYSONS TRUST"
                   fill
                   className="object-contain object-left brightness-0 invert"

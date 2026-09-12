@@ -15,6 +15,7 @@ import {
   Leaf,
   Activity,
   FileCheck,
+  Building2,
 } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -125,17 +126,18 @@ export default function AboutPage() {
         breadcrumbs={[{ label: "About" }]}
       />
 
-      {/* SECTION — OUR STORY */}
-      <section className="py-20 sm:py-24 bg-white">
+      {/* SECTION 1 — OUR STORY (First Section Below Hero) */}
+      <section className="py-12 sm:py-16 bg-white border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Left: Image */}
             <div className="lg:col-span-6 relative">
-              <div className="relative h-[400px] sm:h-[480px] w-full rounded-3xl overflow-hidden shadow-xl border border-slate-100">
+              <div className="relative h-[360px] sm:h-[440px] w-full rounded-3xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
                   src="/trust/roysons_trust_hero.jpg"
                   alt="ROYSONS TRUST Social Development Commitment"
                   fill
+                  priority
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
@@ -152,7 +154,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right: Narrative */}
-            <div className="lg:col-span-6 space-y-6">
+            <div className="lg:col-span-6 space-y-5">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#eff6ff] text-xs font-black uppercase tracking-widest text-[#2563eb]">
                 <span className="w-2 h-2 rounded-full bg-[#2563eb]" />
                 <span>OUR STORY</span>
@@ -185,8 +187,84 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION — OUR APPROACH (4 CARDS) */}
-      <section className="py-20 bg-[#f8fafc] border-y border-slate-200/60">
+      {/* SECTION 2 — BOARD OF DIRECTORS / LEADERSHIP GOVERNANCE (Second Section) */}
+      <section className="py-12 sm:py-16 bg-[#f8fafc] border-b border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            {/* Left: AI-Generated Board Meeting Image */}
+            <div className="lg:col-span-6 relative">
+              <div className="relative h-[340px] sm:h-[420px] w-full rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
+                <Image
+                  src="/trust/board-meeting.jpg"
+                  alt="ROYSONS TRUST Board of Trustees Strategic Governance Meeting"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 text-white space-y-1">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-xs font-bold uppercase tracking-wider text-teal-300">
+                    <Building2 size={13} />
+                    <span>Fiduciary Stewardship</span>
+                  </div>
+                  <p className="text-base sm:text-lg font-bold text-white leading-snug">
+                    Board of Trustees in Strategic Governance Session
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Leadership Content & Direct Link to Leadership Page */}
+            <div className="lg:col-span-6 space-y-5">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-xs font-bold uppercase tracking-widest text-[#0f766e]">
+                <span className="w-2 h-2 rounded-full bg-[#0f766e] animate-pulse" />
+                <span>LEADERSHIP &amp; GOVERNANCE</span>
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0f172a] tracking-tight leading-snug">
+                Guided by Strategic Stewardship and Responsible Leadership
+              </h2>
+
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
+                ROYSONS TRUST is governed by a dedicated Board of Trustees committed to fiduciary excellence, strategic direction, and transparent community uplift.
+              </p>
+
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                Our leadership brings together extensive domain expertise spanning academic development, clinical healthcare, social welfare, statutory law, and financial audit. Under their stewardship, every philanthropic contribution directly translates into verified human dignity and sustainable generational progress.
+              </p>
+
+              {/* Trust Indicators */}
+              <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-bold text-[#0f766e]">
+                <div className="flex items-center gap-1.5 bg-white border border-teal-200 px-3 py-1.5 rounded-lg shadow-2xs">
+                  <CheckCircle2 size={15} className="text-emerald-600" />
+                  <span>Statutory Board Oversight</span>
+                </div>
+                <div className="flex items-center gap-1.5 bg-white border border-teal-200 px-3 py-1.5 rounded-lg shadow-2xs">
+                  <CheckCircle2 size={15} className="text-emerald-600" />
+                  <span>Independent Audited Allocations</span>
+                </div>
+              </div>
+
+              {/* CTA Button linked directly to Leadership Page */}
+              <div className="pt-3">
+                <Link
+                  href="/leadership-trustees"
+                  className="btn-gradient inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-white text-sm font-bold uppercase tracking-wider shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all group"
+                >
+                  <span>Meet Our Board of Trustees</span>
+                  <ArrowRight
+                    size={16}
+                    className="transform group-hover:translate-x-1 transition-transform"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION — OUR APPROACH (Compact Spacing py-12 sm:py-16) */}
+      <section className="py-12 sm:py-16 bg-[#f8fafc] border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="METHODOLOGY"
@@ -200,7 +278,7 @@ export default function AboutPage() {
               return (
                 <div
                   key={idx}
-                  className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-2 transition-all duration-300 space-y-4 group"
+                  className="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-2 transition-all duration-300 space-y-4 group"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-[#eff6ff] text-[#2563eb] group-hover:scale-110 flex items-center justify-center transition-transform shadow-xs">
                     <Icon size={26} />
@@ -218,9 +296,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION — WHAT WE BELIEVE */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
+      {/* SECTION — WHAT WE BELIEVE (Compact Spacing py-16) */}
+      <section className="py-16 bg-white relative overflow-hidden border-b border-slate-200/60">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-5">
           <span className="text-xs font-black uppercase tracking-widest text-[#0f766e] bg-teal-50 px-4 py-1.5 rounded-full border border-teal-200">
             Core Conviction
           </span>
@@ -233,10 +311,10 @@ export default function AboutPage() {
             We believe that no community should be defined by its limitations, but rather by its boundless human potential. When we invest in a child&apos;s education, provide clean drinking water to an entire village, or equip a woman with a vocational craft, the ripple effects transform families for generations to come.
           </p>
 
-          <div className="pt-4">
+          <div className="pt-3">
             <Link
               href="/donate"
-              className="btn-emerald inline-flex items-center gap-2 px-8 py-4 rounded-xl text-white text-sm font-bold uppercase tracking-wider shadow-md"
+              className="btn-emerald inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-white text-sm font-bold uppercase tracking-wider shadow-md hover:scale-[1.02] transition-all"
             >
               <Heart size={16} className="fill-white" />
               <span>Support Our Vision</span>
@@ -245,8 +323,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION — OUR VALUES (6 CARDS WITH HOVER ANIMATION) */}
-      <section className="py-20 bg-[#f8fafc] border-y border-slate-200/60">
+      {/* SECTION — OUR VALUES (Compact Spacing py-12 sm:py-16) */}
+      <section className="py-12 sm:py-16 bg-[#f8fafc] border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="INSTITUTIONAL VALUES"
@@ -254,13 +332,13 @@ export default function AboutPage() {
             subtitle="The ethical principles that guide every decision, team member, and partner across ROYSONS TRUST."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {values.map((v, idx) => {
               const Icon = v.icon;
               return (
                 <div
                   key={idx}
-                  className="group bg-white rounded-3xl p-8 border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-2 hover:border-[#0f766e]/40 transition-all duration-300 space-y-4"
+                  className="group bg-white rounded-3xl p-7 border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-2 hover:border-[#0f766e]/40 transition-all duration-300 space-y-4"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-teal-50 text-[#0f766e] group-hover:scale-110 flex items-center justify-center transition-transform shadow-xs">
                     <Icon size={26} />
@@ -278,8 +356,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION — HOW WE WORK (HORIZONTAL ANIMATED TIMELINE) */}
-      <section className="py-20 sm:py-24 bg-white">
+      {/* SECTION — HOW WE WORK (Compact Spacing py-12 sm:py-16) */}
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="PROCESS & GOVERNANCE"
@@ -287,13 +365,13 @@ export default function AboutPage() {
             subtitle="A disciplined, step-by-step methodology ensuring responsible implementation, verification, and scalability."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 pt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5 pt-2">
             {timelineSteps.map((step, idx) => (
               <div
                 key={idx}
-                className="relative bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-[#2563eb] hover:shadow-lg transition-all duration-300 group flex flex-col justify-between"
+                className="relative bg-slate-50 hover:bg-white rounded-2xl p-5 border border-slate-200 hover:border-[#2563eb] hover:shadow-lg transition-all duration-300 group flex flex-col justify-between"
               >
-                <div className="space-y-3">
+                <div className="space-y-2.5">
                   <span className="block text-2xl font-black text-[#2563eb] group-hover:scale-110 transition-transform">
                     {step.number}
                   </span>
@@ -314,10 +392,10 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-10">
             <Link
               href="/contact"
-              className="btn-primary inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-white text-xs font-bold uppercase tracking-wider"
+              className="btn-primary inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-md hover:scale-[1.02] transition-all"
             >
               <span>Partner With Us</span>
               <ArrowRight size={14} />
