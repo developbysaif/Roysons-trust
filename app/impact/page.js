@@ -116,27 +116,27 @@ export default function ImpactPage() {
             {IMPACT_COUNTERS.map((c, idx) => (
               <div
                 key={idx}
-                className="bg-slate-50 hover:bg-white rounded-3xl p-8 border border-slate-200 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 space-y-3 flex flex-col justify-between"
+                className="bg-slate-50 hover:bg-white rounded-3xl p-8 sm:p-9 border border-slate-200 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 space-y-4 flex flex-col justify-between"
               >
                 <div>
-                  <span className="block text-3xl sm:text-4xl lg:text-5xl font-black text-[#2563eb]">
+                  <span className="block text-4xl sm:text-5xl lg:text-6xl font-black text-[#00779E] tracking-tight">
                     <ImpactCounter target={c.value} suffix={c.suffix} />
                   </span>
-                  <h3 className="text-base sm:text-lg font-bold text-[#0f172a] mt-2">
+                  <h3 className="text-xl sm:text-2xl font-black text-[#0f172a] mt-3">
                     {c.label}
                   </h3>
-                  <p className="text-xs text-slate-500 leading-relaxed mt-1">
+                  <p className="text-base sm:text-lg text-slate-700 leading-relaxed mt-2 font-normal">
                     {c.desc}
                   </p>
                 </div>
-                <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block pt-2 border-t border-slate-200/60">
+                <span className="text-xs sm:text-sm font-bold text-slate-500 uppercase tracking-wider block pt-3 border-t border-slate-200">
                   [Verified Fiduciary Metric]
                 </span>
               </div>
             ))}
           </div>
 
-          <p className="text-center text-xs text-slate-500 mt-8">
+          <p className="text-center text-sm sm:text-base text-slate-600 font-medium mt-10">
             Note: Statistics are audited and updated on a quarterly cycle in accordance with non-profit regulatory standards.
           </p>
         </div>
@@ -157,30 +157,30 @@ export default function ImpactPage() {
               return (
                 <div
                   key={idx}
-                  className="group bg-white rounded-3xl p-8 border border-slate-200 shadow-xs hover:shadow-xl hover:-translate-y-2 hover:border-[#0f766e] transition-all duration-300 space-y-4 flex flex-col justify-between"
+                  className="group bg-white rounded-3xl p-8 sm:p-9 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-[#00779E] transition-all duration-300 space-y-5 flex flex-col justify-between"
                 >
                   <div className="space-y-4">
-                    <div className="w-14 h-14 rounded-2xl bg-teal-50 text-[#0f766e] group-hover:scale-110 flex items-center justify-center transition-transform shadow-xs">
-                      <Icon size={26} />
+                    <div className="w-16 h-16 rounded-2xl bg-teal-50 text-[#00779E] group-hover:scale-110 flex items-center justify-center transition-transform shadow-xs border border-teal-100">
+                      <Icon size={30} />
                     </div>
-                    <h3 className="text-2xl font-bold text-[#0f172a] group-hover:text-[#0f766e] transition-colors">
+                    <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0f172a] group-hover:text-[#00779E] transition-colors leading-snug">
                       {area.title}
                     </h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
                       {area.desc}
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-xs font-bold text-[#2563eb]">
+                  <div className="pt-5 border-t border-slate-200 flex items-center justify-between">
+                    <span className="text-sm sm:text-base font-black text-[#00779E]">
                       {area.stats}
                     </span>
                     <Link
                       href={area.href}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0f766e] hover:text-[#2563eb] transition-colors"
+                      className="inline-flex items-center gap-2 text-sm sm:text-base font-extrabold text-[#00779E] hover:text-[#0f172a] transition-colors"
                     >
                       <span>Learn More</span>
-                      <ArrowRight size={13} />
+                      <ArrowRight size={16} />
                     </Link>
                   </div>
                 </div>
@@ -216,22 +216,22 @@ export default function ImpactPage() {
             {IMPACT_PROCESS.map((step, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all space-y-3 flex flex-col justify-between group"
+                className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all space-y-4 flex flex-col justify-between group"
               >
-                <div className="space-y-2">
-                  <span className="block text-2xl font-black text-[#2563eb]">
+                <div className="space-y-2.5">
+                  <span className="block text-3xl sm:text-4xl font-black text-[#00779E]">
                     {step.step}
                   </span>
-                  <h4 className="text-base font-bold text-[#0f172a] group-hover:text-[#0f766e] transition-colors">
+                  <h4 className="text-lg sm:text-xl font-extrabold text-[#0f172a] group-hover:text-[#00779E] transition-colors leading-snug">
                     {step.name}
                   </h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
                     {step.desc}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-slate-100 text-[11px] font-semibold text-emerald-600 flex items-center gap-1">
-                  <CheckCircle2 size={12} />
+                <div className="pt-3.5 border-t border-slate-100 text-xs sm:text-sm font-bold text-emerald-700 flex items-center gap-1.5">
+                  <CheckCircle2 size={15} />
                   <span>Sequential Phase</span>
                 </div>
               </div>
@@ -253,16 +253,16 @@ export default function ImpactPage() {
             {impactData.sdgAlignment.map((sdg) => (
               <div
                 key={sdg.number}
-                className="p-6 rounded-3xl bg-white border border-slate-200 shadow-xs hover:shadow-md transition-all flex items-start gap-4"
+                className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all flex items-start gap-4"
               >
-                <div className={`w-12 h-12 rounded-2xl text-white font-black text-lg flex items-center justify-center flex-shrink-0 ${sdg.color}`}>
+                <div className={`w-14 h-14 rounded-2xl text-white font-black text-xl flex items-center justify-center flex-shrink-0 ${sdg.color} shadow-xs`}>
                   {sdg.number}
                 </div>
-                <div>
-                  <h4 className="text-base font-bold text-[#0f172a]">
+                <div className="space-y-1.5">
+                  <h4 className="text-lg sm:text-xl font-extrabold text-[#0f172a] leading-snug">
                     {sdg.name}
                   </h4>
-                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
                     {sdg.desc}
                   </p>
                 </div>
@@ -270,12 +270,12 @@ export default function ImpactPage() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-14 text-center">
             <Link
               href="/donate"
-              className="btn-emerald inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-white text-xs font-bold uppercase tracking-wider shadow-md"
+              className="btn-emerald inline-flex items-center gap-2 px-9 py-4 rounded-xl text-white text-sm sm:text-base font-extrabold uppercase tracking-wider shadow-lg hover:scale-[1.02] transition-all"
             >
-              <Heart size={15} className="fill-white" />
+              <Heart size={18} className="fill-white" />
               <span>Contribute to Measurable Change</span>
             </Link>
           </div>

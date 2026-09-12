@@ -54,44 +54,44 @@ export default function SuccessStoriesPage() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute top-4 left-4 z-10">
-                <span className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-xs font-bold uppercase tracking-wider text-[#0f766e] shadow-sm">
+                <span className="px-4 py-2 rounded-full bg-white/95 backdrop-blur-md text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#00779E] shadow-sm border border-slate-200">
                   {featuredStory.category}
                 </span>
               </div>
             </div>
 
             {/* Right: Narrative & Quote */}
-            <div className="lg:col-span-6 p-6 sm:p-10 space-y-6">
-              <div className="flex items-center gap-2 text-xs font-bold text-slate-500">
-                <MapPin size={14} className="text-[#0f766e]" />
+            <div className="lg:col-span-6 p-6 sm:p-10 lg:p-12 space-y-6">
+              <div className="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-slate-600">
+                <MapPin size={16} className="text-[#00779E]" />
                 <span>{featuredStory.location}</span>
                 <span>&bull;</span>
-                <span className="text-[#2563eb]">{featuredStory.personName}</span>
+                <span className="text-[#00779E]">{featuredStory.personName}</span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-black text-[#0f172a] leading-snug">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0f172a] leading-snug tracking-tight">
                 {featuredStory.title}
               </h3>
 
-              <div className="p-4 rounded-2xl bg-[#eff6ff] border-l-4 border-[#2563eb]">
-                <p className="text-sm sm:text-base text-slate-700 italic font-medium leading-relaxed">
+              <div className="p-5 rounded-2xl bg-[#eff6ff] border-l-4 border-[#00779E]">
+                <p className="text-base sm:text-lg text-slate-800 italic font-medium leading-relaxed">
                   &ldquo;{featuredStory.quote}&rdquo;
                 </p>
               </div>
 
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
                 {featuredStory.story}
               </p>
 
-              <div className="pt-2 border-t border-slate-200/60 flex items-center justify-between">
-                <div className="text-xs text-slate-500 font-medium">
+              <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
+                <div className="text-xs sm:text-sm text-slate-600 font-semibold">
                   Verified by ROYSONS TRUST Field Monitoring Unit
                 </div>
                 <Link
                   href="/donate"
-                  className="btn-emerald inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold uppercase tracking-wider"
+                  className="btn-emerald inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-sm"
                 >
-                  <Heart size={14} className="fill-white" />
+                  <Heart size={16} className="fill-white" />
                   <span>Sponsor a Student</span>
                 </Link>
               </div>
@@ -114,10 +114,10 @@ export default function SuccessStoriesPage() {
               <div
                 key={story.id}
                 id={story.slug}
-                className="bg-white rounded-3xl border border-slate-200 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between group"
+                className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between group"
               >
                 <div>
-                  <div className="relative h-52 w-full bg-slate-100 overflow-hidden">
+                  <div className="relative h-56 w-full bg-slate-100 overflow-hidden">
                     <Image
                       src={story.image}
                       alt={story.title}
@@ -126,45 +126,45 @@ export default function SuccessStoriesPage() {
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                     <div className="absolute top-4 left-4 z-10">
-                      <span className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-[#0f766e] shadow-xs">
+                      <span className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#00779E] shadow-xs border border-slate-200">
                         {story.category}
                       </span>
                     </div>
                   </div>
 
-                  <div className="p-6 space-y-4">
-                    <div className="flex items-center gap-1.5 text-xs text-slate-500 font-semibold">
-                      <MapPin size={13} className="text-[#0f766e]" />
+                  <div className="p-6 sm:p-7 space-y-4">
+                    <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-600 font-bold">
+                      <MapPin size={15} className="text-[#00779E]" />
                       <span>{story.location}</span>
                       <span>&bull;</span>
-                      <span className="text-[#2563eb]">{story.beneficiaryAlias}</span>
+                      <span className="text-[#00779E]">{story.beneficiaryAlias}</span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-[#0f172a] group-hover:text-[#2563eb] transition-colors leading-snug">
+                    <h3 className="text-xl sm:text-2xl font-black text-[#0f172a] group-hover:text-[#00779E] transition-colors leading-snug">
                       {story.title}
                     </h3>
 
-                    <div className="space-y-2 text-xs">
-                      <div className="p-3 rounded-xl bg-rose-50/60 border border-rose-100">
-                        <span className="font-bold text-rose-700 block mb-0.5">The Challenge:</span>
-                        <p className="text-slate-600 line-clamp-2">{story.challenge}</p>
+                    <div className="space-y-2.5">
+                      <div className="p-3.5 rounded-2xl bg-rose-50/70 border border-rose-200/60">
+                        <span className="text-xs sm:text-sm font-black text-rose-800 block mb-1">The Challenge:</span>
+                        <p className="text-sm sm:text-base text-slate-700 leading-relaxed line-clamp-2">{story.challenge}</p>
                       </div>
 
-                      <div className="p-3 rounded-xl bg-teal-50/60 border border-teal-100">
-                        <span className="font-bold text-[#0f766e] block mb-0.5">Support Received:</span>
-                        <p className="text-slate-600 line-clamp-2">{story.support}</p>
+                      <div className="p-3.5 rounded-2xl bg-teal-50/70 border border-teal-200/60">
+                        <span className="text-xs sm:text-sm font-black text-[#0f766e] block mb-1">Support Received:</span>
+                        <p className="text-sm sm:text-base text-slate-700 leading-relaxed line-clamp-2">{story.support}</p>
                       </div>
 
-                      <div className="p-3 rounded-xl bg-emerald-50/60 border border-emerald-100">
-                        <span className="font-bold text-emerald-700 block mb-0.5">Outcome:</span>
-                        <p className="text-slate-600 line-clamp-2">{story.outcome}</p>
+                      <div className="p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-200/60">
+                        <span className="text-xs sm:text-sm font-black text-emerald-800 block mb-1">Outcome:</span>
+                        <p className="text-sm sm:text-base text-slate-700 leading-relaxed line-clamp-2">{story.outcome}</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-6 pt-0">
-                  <p className="text-xs text-slate-500 italic border-t border-slate-100 pt-3 line-clamp-2">
+                <div className="p-6 sm:p-7 pt-0">
+                  <p className="text-sm sm:text-base text-slate-600 italic border-t border-slate-200 pt-4 line-clamp-2 font-medium">
                     &ldquo;{story.quote}&rdquo;
                   </p>
                 </div>
@@ -187,11 +187,11 @@ export default function SuccessStoriesPage() {
             {videoStories.map((vid) => (
               <div
                 key={vid.id}
-                className="group bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between cursor-pointer"
+                className="group bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between cursor-pointer"
                 onClick={() => setActiveVideo(vid)}
               >
                 <div>
-                  <div className="relative h-52 w-full bg-slate-900 overflow-hidden">
+                  <div className="relative h-56 w-full bg-slate-900 overflow-hidden">
                     <Image
                       src={vid.thumbnail}
                       alt={vid.title}
@@ -203,36 +203,36 @@ export default function SuccessStoriesPage() {
 
                     {/* Play Button Icon */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-14 h-14 rounded-full bg-white/90 group-hover:bg-white text-[#2563eb] flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                        <Play size={24} className="fill-current ml-1" />
+                      <div className="w-16 h-16 rounded-full bg-white/95 group-hover:bg-white text-[#00779E] flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                        <Play size={26} className="fill-current ml-1" />
                       </div>
                     </div>
 
-                    <div className="absolute bottom-3 right-3 bg-black/70 text-white text-[11px] font-bold px-2 py-0.5 rounded">
+                    <div className="absolute bottom-3 right-3 bg-black/80 text-white text-xs font-bold px-2.5 py-1 rounded-md">
                       {vid.duration}
                     </div>
 
                     <div className="absolute top-3 left-3">
-                      <span className="px-3 py-1 rounded-full bg-white/95 text-[11px] font-bold uppercase tracking-wider text-[#0f766e]">
+                      <span className="px-3.5 py-1.5 rounded-full bg-white/95 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#00779E] shadow-xs">
                         {vid.category}
                       </span>
                     </div>
                   </div>
 
-                  <div className="p-6 space-y-2">
-                    <h3 className="text-lg font-bold text-[#0f172a] group-hover:text-[#2563eb] transition-colors leading-snug">
+                  <div className="p-6 sm:p-7 space-y-3">
+                    <h3 className="text-xl sm:text-2xl font-black text-[#0f172a] group-hover:text-[#00779E] transition-colors leading-snug">
                       {vid.title}
                     </h3>
-                    <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">
+                    <p className="text-base sm:text-lg text-slate-700 leading-relaxed line-clamp-2 font-normal">
                       {vid.shortDescription}
                     </p>
                   </div>
                 </div>
 
-                <div className="p-6 pt-0 border-t border-slate-100 mt-2">
-                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#2563eb] group-hover:underline">
+                <div className="p-6 sm:p-7 pt-0 border-t border-slate-200 mt-2">
+                  <span className="inline-flex items-center gap-2 text-sm sm:text-base font-extrabold text-[#00779E] group-hover:underline">
                     <span>Watch Story</span>
-                    <ArrowRight size={13} />
+                    <ArrowRight size={16} />
                   </span>
                 </div>
               </div>

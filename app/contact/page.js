@@ -94,10 +94,10 @@ export default function ContactPage() {
                       <MapPin size={18} />
                     </div>
                     <div>
-                      <span className="font-bold text-slate-900 block mb-0.5">
+                      <span className="font-extrabold text-slate-900 block mb-1 text-sm sm:text-base">
                         Office Address
                       </span>
-                      <span className="text-slate-600 leading-relaxed">
+                      <span className="text-slate-700 leading-relaxed text-sm sm:text-base font-medium block">
                         {siteConfig.contact.address}
                       </span>
                     </div>
@@ -209,22 +209,22 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-xs font-black uppercase tracking-widest text-[#0f766e]">
+              <span className="text-xs font-black uppercase tracking-widest text-[#00779E]">
                 Location Coordinates
               </span>
-              <h3 className="text-xl font-bold text-[#0f172a]">
+              <h3 className="text-xl sm:text-2xl font-black text-[#0f172a]">
                 Secretariat Location Map
               </h3>
             </div>
-            <span className="text-xs text-slate-500">
-              [Verified Office Location: Gulberg II, Lahore, Pakistan]
+            <span className="text-xs sm:text-sm font-semibold text-slate-600">
+              Verified Office Location: Rehman Centre 2, DHA Phase 5, Lahore
             </span>
           </div>
 
           <div className="h-80 sm:h-96 w-full rounded-3xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 relative">
             <iframe
               title="ROYSONS TRUST Verified Office Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27218.736021295325!2d74.3312!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919045a55555555%3A0x1111111111111111!2sGulberg%2C%20Lahore!5e0!3m2!1sen!2spk!4v1600000000000!5m2!1sen!2spk"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13615.429013098317!2d74.4086!3d31.4682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919089f22222222%3A0x2222222222222222!2sDHA%20Phase%205%2C%20Lahore!5e0!3m2!1sen!2spk!4v1600000000000!5m2!1sen!2spk"
               width="100%"
               height="100%"
               style={{ border: 0 }}

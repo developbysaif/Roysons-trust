@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
     description: siteConfig.description,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "14-E, Gulberg II",
+      streetAddress: "Rehman Centre 2, DHA Phase 5, Ring Road Service Lane, Natha Singh Wala",
       addressLocality: "Lahore",
       addressRegion: "Punjab",
       addressCountry: "PK",

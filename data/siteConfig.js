@@ -11,7 +11,7 @@ export const siteConfig = {
   logoMark: "/logos/roysons-main.png",
   
   contact: {
-    address: "[Official Roysons Trust Secretariat, 14-E, Gulberg II, Lahore, Pakistan]",
+    address: "Rehman Centre 2, DHA Phase 5, Ring Road Service Lane, Natha Singh Wala, Lahore",
     phone: "+92 42 3571 2345",
     helpline: "+92 300 000 0000",
     email: "info@roysonstrust.org",

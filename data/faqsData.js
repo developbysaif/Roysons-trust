@@ -57,6 +57,6 @@ export const faqsData = [
     category: "Contact & Assistance",
     question: "How can I contact Roysons Trust directly?",
     answer:
-      "You can call our corporate helpline at +92 42 3571 2345, reach out via WhatsApp at +92 300 000 0000, or email us at info@roysonstrust.org. Our head office is located at Gulberg II, Lahore, open Monday through Saturday from 9:00 AM to 6:00 PM PKT.",
+      "You can call our corporate helpline at +92 42 3571 2345, reach out via WhatsApp at +92 300 000 0000, or email us at info@roysonstrust.org. Our head office is located at Rehman Centre 2, DHA Phase 5, Ring Road Service Lane, Natha Singh Wala, Lahore, open Monday through Saturday from 9:00 AM to 6:00 PM PKT.",
   },
 ];
