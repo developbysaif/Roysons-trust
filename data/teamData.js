@@ -75,9 +75,9 @@ export const teamData = {
       role: "Trustee, Education & Skills Development",
       shortDescription:
         "Supporting initiatives focused on education, learning opportunities and skills development.",
-      photo: null,
+      photo: "/trustees/hesham-sultan.jpg",
       term: "[Statutory Appointment]",
-      hasRealPhoto: false,
+      hasRealPhoto: true,
     },
     {
       id: "trustee-4",
@@ -85,9 +85,9 @@ export const teamData = {
       role: "Trustee, Healthcare & Wellbeing",
       shortDescription:
         "Supporting healthcare, wellbeing and initiatives that contribute to healthier communities.",
-      photo: null,
+      photo: "/trustees/yahya-sultan.jpg",
       term: "[Statutory Appointment]",
-      hasRealPhoto: false,
+      hasRealPhoto: true,
     },
     {
       id: "trustee-5",
@@ -95,7 +95,7 @@ export const teamData = {
       role: "Trustee, Social Welfare & Community Development",
       shortDescription:
         "Supporting social welfare initiatives and community development programs designed to create meaningful social impact.",
-      photo: "/logos/ashan sardar.jpeg",
+      photo: "/trustees/ahsan-sardar.jpg",
       term: "[Statutory Appointment]",
       hasRealPhoto: true,
     },
@@ -105,9 +105,9 @@ export const teamData = {
       role: "Trustee, Legal & Governance",
       shortDescription:
         "Supporting responsible governance, institutional policies and legal oversight.",
-      photo: null,
+      photo: "/trustees/marrukh-ijaz.jpg",
       term: "[Statutory Appointment]",
-      hasRealPhoto: false,
+      hasRealPhoto: true,
     },
     {
       id: "trustee-7",
@@ -115,9 +115,9 @@ export const teamData = {
       role: "Trustee, Finance & Audit",
       shortDescription:
         "Supporting financial oversight, accountability and responsible stewardship of Trust resources.",
-      photo: null,
+      photo: "/trustees/waliya-jamshan.jpg",
       term: "[Statutory Appointment]",
-      hasRealPhoto: false,
+      hasRealPhoto: true,
     },
     {
       id: "trustee-8",
@@ -125,9 +125,9 @@ export const teamData = {
       role: "Trustee, Community Development",
       shortDescription:
         "Supporting community-focused initiatives and programs that strengthen social wellbeing and opportunity.",
-      photo: null,
+      photo: "/trustees/safa-ather.jpg",
       term: "[Statutory Appointment]",
-      hasRealPhoto: false,
+      hasRealPhoto: true,
     },
   ],
 

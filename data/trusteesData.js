@@ -55,8 +55,8 @@ export const trusteesData = {
       portfolio: "Education & Skills Development",
       description:
         "Supporting initiatives focused on education, learning opportunities and skills development.",
-      image: null,
-      hasRealPhoto: false,
+      image: "/trustees/hesham-sultan.jpg",
+      hasRealPhoto: true,
       icon: "GraduationCap",
       featured: false,
       slug: "hesham-sultan",
@@ -70,8 +70,8 @@ export const trusteesData = {
       portfolio: "Healthcare & Wellbeing",
       description:
         "Supporting healthcare, wellbeing and initiatives that contribute to healthier communities.",
-      image: null,
-      hasRealPhoto: false,
+      image: "/trustees/yahya-sultan.jpg",
+      hasRealPhoto: true,
       icon: "HeartPulse",
       featured: false,
       slug: "yahya-sultan",
@@ -85,7 +85,7 @@ export const trusteesData = {
       portfolio: "Social Welfare & Community Development",
       description:
         "Supporting social welfare initiatives and community development programs designed to create meaningful social impact.",
-      image: "/logos/ashan sardar.jpeg",
+      image: "/trustees/ahsan-sardar.jpg",
       hasRealPhoto: true,
       icon: "Users",
       featured: false,
@@ -100,8 +100,8 @@ export const trusteesData = {
       portfolio: "Legal & Governance",
       description:
         "Supporting responsible governance, institutional policies and legal oversight.",
-      image: null,
-      hasRealPhoto: false,
+      image: "/trustees/marrukh-ijaz.jpg",
+      hasRealPhoto: true,
       icon: "Scale",
       featured: false,
       slug: "marrukh-ijaz",
@@ -115,8 +115,8 @@ export const trusteesData = {
       portfolio: "Finance & Audit",
       description:
         "Supporting financial oversight, accountability and responsible stewardship of Trust resources.",
-      image: null,
-      hasRealPhoto: false,
+      image: "/trustees/waliya-jamshan.jpg",
+      hasRealPhoto: true,
       icon: "ChartNoAxesCombined",
       featured: false,
       slug: "waliya-jamshan",
@@ -130,8 +130,8 @@ export const trusteesData = {
       portfolio: "Community Development",
       description:
         "Supporting community-focused initiatives and programs that strengthen social wellbeing and opportunity.",
-      image: null,
-      hasRealPhoto: false,
+      image: "/trustees/safa-ather.jpg",
+      hasRealPhoto: true,
       icon: "Handshake",
       featured: false,
       slug: "safa-ather",
