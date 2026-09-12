@@ -67,6 +67,17 @@ export const metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [
+      { url: "/logos/roysons-r-icon.png", type: "image/png" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/logos/roysons-r-icon.png",
+    apple: [
+      { url: "/logos/roysons-r-icon.png" },
+      { url: "/apple-icon.png" },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -100,6 +111,9 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <head>
+        <link rel="icon" href="/logos/roysons-r-icon.png" type="image/png" />
+        <link rel="shortcut icon" href="/logos/roysons-r-icon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logos/roysons-r-icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
