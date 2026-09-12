@@ -89,7 +89,7 @@ export default function ProgramsPage() {
                   {/* Program Image Column */}
                   <div className={`lg:col-span-5 relative min-h-[320px] sm:min-h-[380px] lg:min-h-[460px] bg-slate-100 ${isReversed ? "lg:order-2" : "lg:order-1"}`}>
                     <Image
-                      src={prog.hero?.coverImage || prog.coverImage || "/trust/roysons_trust_hero.jpg"}
+                      src={prog.hero?.coverImage || prog.coverImage || "/trust/roysons_trust_hero.png"}
                       alt={prog.title}
                       fill
                       className="object-cover"

@@ -21,7 +21,7 @@ export const teamData = {
       name: "[Director of Humanitarian Operations]",
       designation: "Director of Field Programs & Emergency Relief",
       bio: "Directs grassroots field missions, mobile medical clinics, emergency ration logistics, and community coordination across active intervention districts.",
-      image: "/trust/roysons_trust_hero.jpg",
+      image: "/trust/roysons_trust_hero.png",
       linkedin: "https://linkedin.com/company/roysons-trust",
       department: "Field Operations",
       quote: "Speed and empathy are essential when serving families in distress.",

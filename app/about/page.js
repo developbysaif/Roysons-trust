@@ -134,7 +134,7 @@ export default function AboutPage() {
             <div className="lg:col-span-6 relative">
               <div className="relative h-[360px] sm:h-[440px] w-full rounded-3xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="/trust/roysons_trust_hero.jpg"
+                  src="/trust/roysons_trust_hero.png"
                   alt="ROYSONS TRUST Social Development Commitment"
                   fill
                   priority

@@ -81,7 +81,7 @@ export async function generateMetadata({ params }) {
       description: program.hero?.description || program.tagline,
       images: [
         {
-          url: program.hero?.coverImage || "/trust/roysons_trust_hero.jpg",
+          url: program.hero?.coverImage || "/trust/roysons_trust_hero.png",
           width: 1200,
           height: 630,
           alt: program.title,

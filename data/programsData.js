@@ -380,7 +380,7 @@ export const programsData = [
         "Sustainable community development begins by understanding local needs and working with people to create practical solutions.",
         "Our approach focuses on community participation, collaboration and long-term value. We invest in clean drinking water plants, public sanitation, and local infrastructure that establish durable foundations for generational growth.",
       ],
-      image: "/trust/roysons_trust_hero.jpg",
+      image: "/trust/roysons_trust_hero.png",
     },
     challenge: {
       heading: "The Community Challenge",

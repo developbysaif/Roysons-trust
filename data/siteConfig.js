@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Roysons Trust is a purpose-driven charitable institution committed to empowering communities through sustainable education, healthcare access, food security, emergency relief, and human development.",
   url: "https://roysonstrust.org",
-  ogImage: "/trust/roysons_trust_hero.jpg",
+  ogImage: "/trust/roysons_trust_hero.png",
   logo: "/logos/Roysons-02.png",
   logoWhite: "/logos/Roysons-03.png",
   logoMark: "/logos/roysons-main.png",

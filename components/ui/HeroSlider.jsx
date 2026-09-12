@@ -14,7 +14,7 @@ const slides = [
     primaryCta: { label: "Explore Our Impact", href: "/impact" },
     secondaryCta: { label: "Make an Impact", href: "/donate" },
     badge: "Global Humanitarian Trust",
-    image: "/trust/roysons_trust_hero.jpg",
+    image: "/trust/roysons_trust_hero.png",
     alt: "ROYSONS TRUST Community Humanitarian Support",
   },
   {

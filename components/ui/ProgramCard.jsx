@@ -29,7 +29,7 @@ export default function ProgramCard({ program }) {
       {/* Top Image Banner with Zoom */}
       <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-neutral-100">
         <Image
-          src={program.hero?.coverImage || program.coverImage || "/trust/roysons_trust_hero.jpg"}
+          src={program.hero?.coverImage || program.coverImage || "/trust/roysons_trust_hero.png"}
           alt={program.title}
           fill
           className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
