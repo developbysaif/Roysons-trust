@@ -55,7 +55,7 @@ export const teamData = {
       role: "Chairman, Board of Trustees",
       shortDescription:
         "Providing strategic leadership and guiding the Trust's vision, governance and long-term direction.",
-      photo: "/logos/chairman.jpeg",
+      photo: "/logos/ijaz.jpeg",
       term: "[Statutory Appointment]",
       hasRealPhoto: true,
     },
@@ -65,7 +65,7 @@ export const teamData = {
       role: "Vice Chairman, Board of Trustees",
       shortDescription:
         "Supporting the Trust's leadership and governance while contributing to its strategic objectives and community-focused initiatives.",
-      photo: "/logos/ijaz.jpeg",
+      photo: "/logos/chairman.jpeg",
       term: "[Statutory Appointment]",
       hasRealPhoto: true,
     },

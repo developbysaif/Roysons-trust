@@ -25,7 +25,7 @@ export const trusteesData = {
       portfolio: "Strategic Leadership & Institutional Governance",
       description:
         "Providing strategic leadership and guiding the Trust's vision, governance and long-term direction.",
-      image: "/logos/chairman.jpeg",
+      image: "/logos/ijaz.jpeg",
       hasRealPhoto: true,
       icon: "Crown",
       featured: true,
@@ -40,7 +40,7 @@ export const trusteesData = {
       portfolio: "Strategic Operations & Community Initiatives",
       description:
         "Supporting the Trust's leadership and governance while contributing to its strategic objectives and community-focused initiatives.",
-      image: "/logos/ijaz.jpeg",
+      image: "/logos/chairman.jpeg",
       hasRealPhoto: true,
       icon: "Award",
       featured: true,
